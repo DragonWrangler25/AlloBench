@@ -387,7 +387,7 @@ every model use the
 identical magnitude-100 numeric rendering, so every model answers literally the
 same problem instances; Appendix~\ref{app:magnitude-sensitivity} reports a
 magnitude-1000 completeness check for Opus's R3 arm. Per-model R2 localization
-and R3 failure mode are summarized in Table~\ref{tab:failure-modes}
+and R3 failure mode are summarized in Table~\ref{tab:ladder}
 (Section~\ref{sec:ladder-results}).}
 \label{tab:models}
 \small
@@ -515,24 +515,27 @@ first-sight commitment among realized commitments at each rung.
 \begin{table}[t]
 \centering
 \caption{Framing ladder across the frontier panel: pooled first-sight
-commitment (\%) among realized commitments at each rung, on 24 paired A2
-streams (seeds 2000--2023). R0 is abstract \textsc{keep}/\textsc{pass}; R1 a
-declarative solver claim on the real problem, no code; R2 the same claim/skip
-loop with a required non-empty \texttt{solve(inputs)} implementation whose
-payoff is independent of code correctness; R3 full reusable-script
-construction. GPT-5.4-mini's R1 rate is among its few realized claims (0.71
-claims/seed; 17/24 seeds claim nothing), and both GPT R3 entries are
-conditional on commitment (GPT-5.4-mini realizes only 34.7\% of available
-build slots).}
+commitment (\%) among realized commitments at each rung (24 paired A2
+streams, seeds 2000--2023), with each model's R3 failure mode. R0 is abstract
+\textsc{keep}/\textsc{pass}; R1 a declarative solver claim on the real problem,
+no code; R2 the same claim/skip loop with a required non-empty
+\texttt{solve(inputs)} implementation whose payoff is independent of code
+correctness; R3 full reusable-script construction. GPT-5.4-mini's R1 rate is
+among its few realized claims (0.71 claims/seed; 17/24 seeds claim nothing),
+and both GPT R3 entries are conditional on commitment (GPT-5.4-mini realizes
+only 34.7\% of available build slots). The eagerness trigger sits at required
+code emission (R2) for Haiku, Opus, and (in its degenerate form)
+GPT-5.4-mini, and only at full construction for GPT-5.6 Sol.}
 \label{tab:ladder}
-\begin{tabular}{lrrrr}
+\small
+\begin{tabular}{@{}lrrrrp{3.6cm}@{}}
 \hline
-Model & R0 & R1 & R2 & R3 \\
+Model & R0 & R1 & R2 & R3 & R3 failure mode \\
 \hline
-Haiku 4.5    & 28   & 33 & 100  & 100  \\
-Opus 4.8     & 4    & 0  & 91.7 & 98.6 \\
-GPT-5.4-mini & 15.3 & 29 & 85.0 & 88.0 \\
-GPT-5.6 Sol  & 23.6 & 0  & 38.9 & 100  \\
+Haiku 4.5    & 28   & 33 & 100  & 100  & Eager collapse (trigger: R2) \\
+Opus 4.8     & 4    & 0  & 91.7 & 98.6 & Eager collapse (trigger: R2) \\
+GPT-5.4-mini & 15.3 & 29 & 85.0 & 88.0 & Degenerate under-commitment; eager when committing \\
+GPT-5.6 Sol  & 23.6 & 0  & 38.9 & 100  & Front-loaded batch (trigger: full construction) \\
 \hline
 \end{tabular}
 \end{table}
@@ -639,28 +642,6 @@ Section~\ref{sec:gate} therefore reflects a capability boundary at
 full construction, not an impossible task -- with the trigger sitting at
 code emission for Haiku, Opus, and (in its degenerate form) GPT-5.4-mini,
 and at full construction for Sol.
-
-\begin{table}[t]
-\centering
-\caption{Per-model localization of the collapse: R2 first-sight commitment and
-the R3 failure mode. R2 requires code emission but does not execute or reward
-its correctness. Entries are pooled first-sight proportions among realized
-commitments ($N=24$, seeds 2000--2023). The trigger sits at required code
-emission (R2) for Haiku, Opus, and (in its degenerate form) GPT-5.4-mini, and
-only at full construction for Sol.}
-\label{tab:failure-modes}
-\small
-\begin{tabular}{@{}lrp{4.6cm}@{}}
-\hline
-Model & R2 & R3 failure mode \\
-\hline
-Haiku 4.5 & 100\% & Eager collapse (trigger: R2) \\
-Opus 4.8 & 91.7\% & Eager collapse (trigger: R2) \\
-GPT-5.4-mini & 85.0\% & Degenerate under-commitment; eager when committing \\
-GPT-5.6 Sol & 38.9\% & Front-loaded batch (trigger: full construction) \\
-\hline
-\end{tabular}
-\end{table}
 
 \subsection{Allocation quality: Score}
 \label{sec:score-results}
