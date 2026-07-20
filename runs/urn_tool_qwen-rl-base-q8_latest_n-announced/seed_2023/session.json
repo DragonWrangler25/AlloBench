@@ -1,0 +1,262 @@
+{
+  "seed": 2023,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "ball",
+  "modality": "tool",
+  "tool_choice": "required",
+  "kept": {
+    "0": 1,
+    "1": 1,
+    "7": 1
+  },
+  "collected": 36,
+  "budget": 3,
+  "unparsed": 1,
+  "turn_usages": [
+    {
+      "input_tokens": 596,
+      "output_tokens": 15,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 696,
+      "output_tokens": 12,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 832,
+      "output_tokens": 15,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 932,
+      "output_tokens": 18,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1053,
+      "output_tokens": 2,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1097,
+      "output_tokens": 15,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "0": "red",
+    "6": "blue",
+    "1": "green",
+    "3": "yellow",
+    "7": "purple",
+    "4": "orange",
+    "5": "black",
+    "2": "white"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "red",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a red ball appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 2,
+      "color": "blue",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 2: another red ball (already kept -> auto-collected, +1).) Draw 3 of 60: a blue ball appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 6,
+      "color": "green",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 4: another red ball (already kept -> auto-collected, +1); draw 5: another red ball (already kept -> auto-collected, +1); draw 6: another red ball (already kept -> auto-collected, +1).) Draw 7 of 60: a green ball appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 8,
+      "color": "yellow",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 8: another green ball (already kept -> auto-collected, +1).) Draw 9 of 60: a yellow ball appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 11,
+      "color": "yellow",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 10: another red ball (already kept -> auto-collected, +1); draw 11: another green ball (already kept -> auto-collected, +1).) Draw 12 of 60: a yellow ball appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 12,
+      "color": "purple",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 13 of 60: a purple ball appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a red ball appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_223fded5",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_223fded5",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 2: another red ball (already kept -> auto-collected, +1).) Draw 3 of 60: a blue ball appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_8859c1c6",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_8859c1c6",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 4: another red ball (already kept -> auto-collected, +1); draw 5: another red ball (already kept -> auto-collected, +1); draw 6: another red ball (already kept -> auto-collected, +1).) Draw 7 of 60: a green ball appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_fa7bd43c",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_fa7bd43c",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 8: another green ball (already kept -> auto-collected, +1).) Draw 9 of 60: a yellow ball appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_eeef689f",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_eeef689f",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 10: another red ball (already kept -> auto-collected, +1); draw 11: another green ball (already kept -> auto-collected, +1).) Draw 12 of 60: a yellow ball appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "Draw 13 of 60: a purple ball appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_52a0e617",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_52a0e617",
+      "content": "{\"ok\": true}"
+    }
+  ]
+}

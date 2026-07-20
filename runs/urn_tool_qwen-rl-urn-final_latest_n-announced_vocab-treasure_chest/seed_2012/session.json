@@ -1,0 +1,483 @@
+{
+  "seed": 2012,
+  "model_key": "qwen-rl-urn-final:latest",
+  "vocab": "treasure_chest",
+  "modality": "tool",
+  "tool_choice": "required",
+  "kept": {
+    "6": 1,
+    "1": 4,
+    "5": 6
+  },
+  "collected": 36,
+  "budget": 3,
+  "unparsed": 8,
+  "turn_usages": [
+    {
+      "input_tokens": 600,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 665,
+      "output_tokens": 19,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 730,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 795,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 843,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 909,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 957,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1004,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1052,
+      "output_tokens": 12,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1175,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1223,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1271,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1319,
+      "output_tokens": 7,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1368,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "5": "skull",
+    "6": "anchor",
+    "3": "dragon",
+    "1": "kraken",
+    "2": "phoenix",
+    "7": "serpent"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "skull",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 1,
+      "color": "anchor",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an anchor coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 2,
+      "color": "skull",
+      "class_id": 5,
+      "class_position": 2,
+      "prompt": "Draw 3 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 3,
+      "color": "dragon",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a dragon coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 4,
+      "color": "kraken",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "Draw 5 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 5,
+      "color": "kraken",
+      "class_id": 1,
+      "class_position": 2,
+      "prompt": "Draw 6 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 6,
+      "color": "kraken",
+      "class_id": 1,
+      "class_position": 3,
+      "prompt": "Draw 7 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 7,
+      "color": "phoenix",
+      "class_id": 2,
+      "class_position": 1,
+      "prompt": "Draw 8 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 8,
+      "color": "kraken",
+      "class_id": 1,
+      "class_position": 4,
+      "prompt": "Draw 9 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 11,
+      "color": "skull",
+      "class_id": 5,
+      "class_position": 3,
+      "prompt": "(Since your last choice: draw 10: another kraken coin (already kept -> auto-collected, +1); draw 11: another kraken coin (already kept -> auto-collected, +1).) Draw 12 of 60: a skull coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 12,
+      "color": "skull",
+      "class_id": 5,
+      "class_position": 4,
+      "prompt": "Draw 13 of 60: a skull coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 13,
+      "color": "serpent",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 14 of 60: a serpent coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 14,
+      "color": "skull",
+      "class_id": 5,
+      "class_position": 5,
+      "prompt": "Draw 15 of 60: a skull coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```\n",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 15,
+      "color": "skull",
+      "class_id": 5,
+      "class_position": 6,
+      "prompt": "Draw 16 of 60: a skull coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_ec61f1e7",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_ec61f1e7",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an anchor coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_0c017155",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_0c017155",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_7b4583b8",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_7b4583b8",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a dragon coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_f7c5757b",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_f7c5757b",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 7 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 8 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 9 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_bbbbbffb",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_bbbbbffb",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 10: another kraken coin (already kept -> auto-collected, +1); draw 11: another kraken coin (already kept -> auto-collected, +1).) Draw 12 of 60: a skull coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 13 of 60: a skull coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 14 of 60: a serpent coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 15 of 60: a skull coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```\n"
+    },
+    {
+      "role": "user",
+      "content": "Draw 16 of 60: a skull coin appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_832d2545",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_832d2545",
+      "content": "{\"ok\": true}"
+    }
+  ]
+}

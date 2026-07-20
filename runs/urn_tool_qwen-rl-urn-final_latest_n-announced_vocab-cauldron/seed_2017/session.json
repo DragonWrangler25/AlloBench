@@ -1,0 +1,414 @@
+{
+  "seed": 2017,
+  "model_key": "qwen-rl-urn-final:latest",
+  "vocab": "cauldron",
+  "modality": "tool",
+  "tool_choice": "required",
+  "kept": {
+    "4": 1,
+    "3": 2,
+    "1": 5
+  },
+  "collected": 35,
+  "budget": 3,
+  "unparsed": 10,
+  "turn_usages": [
+    {
+      "input_tokens": 604,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 669,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 716,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 763,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 811,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 858,
+      "output_tokens": 12,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 933,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 980,
+      "output_tokens": 8,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1028,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1102,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1150,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1198,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1246,
+      "output_tokens": 46,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "4": "frost",
+    "3": "ember",
+    "1": "venom",
+    "5": "mist",
+    "6": "thorn",
+    "2": "spark",
+    "0": "gale",
+    "7": "shade"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "frost",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 1,
+      "color": "ember",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an ember potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 2,
+      "color": "venom",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: a venom potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 3,
+      "color": "mist",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a mist potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 4,
+      "color": "thorn",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 5 of 60: a thorn potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 5,
+      "color": "ember",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "Draw 6 of 60: an ember potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 6,
+      "color": "venom",
+      "class_id": 1,
+      "class_position": 2,
+      "prompt": "Draw 7 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 7,
+      "color": "mist",
+      "class_id": 5,
+      "class_position": 2,
+      "prompt": "Draw 8 of 60: a mist potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```\n",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 8,
+      "color": "mist",
+      "class_id": 5,
+      "class_position": 3,
+      "prompt": "Draw 9 of 60: a mist potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 10,
+      "color": "spark",
+      "class_id": 2,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 10: another ember potion (already kept -> auto-collected, +1).) Draw 11 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 11,
+      "color": "venom",
+      "class_id": 1,
+      "class_position": 3,
+      "prompt": "Draw 12 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 12,
+      "color": "venom",
+      "class_id": 1,
+      "class_position": 4,
+      "prompt": "Draw 13 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 13,
+      "color": "venom",
+      "class_id": 1,
+      "class_position": 5,
+      "prompt": "Draw 14 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "```json\n\n```\n\nThis is where you choose whether to keep the venom potion or pass it.\n\nPlease make your decision and call either `keep` or `pass`.",
+      "n_tool_calls": 1
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_33741a09",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_33741a09",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an ember potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a venom potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a mist potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a thorn potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: an ember potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_3a565968",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_3a565968",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 7 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 8 of 60: a mist potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```\n"
+    },
+    {
+      "role": "user",
+      "content": "Draw 9 of 60: a mist potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 10: another ember potion (already kept -> auto-collected, +1).) Draw 11 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 12 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 13 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 14 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```\n\nThis is where you choose whether to keep the venom potion or pass it.\n\nPlease make your decision and call either `keep` or `pass`.",
+      "tool_calls": [
+        {
+          "id": "untagged_9f0dd37d",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_9f0dd37d",
+      "content": "{\"ok\": true}"
+    }
+  ]
+}

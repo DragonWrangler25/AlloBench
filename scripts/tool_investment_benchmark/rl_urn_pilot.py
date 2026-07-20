@@ -126,10 +126,12 @@ def serve_checkpoint(out_dir: Path, gguf_outtype: str) -> str:
     return f"{RL_MODEL_TAG}:latest"
 
 
-async def _collect(model_tag: str, seeds: list[int], G: int, temperature: float, conc: int) -> list[dict]:
+async def _collect(model_tag: str, seeds: list[int], G: int, temperature: float, conc: int,
+                   announce_n: bool = False) -> list[dict]:
     client = RawChat()
     return await collect_batch(client, model_tag, seeds, G, N=N, T=T, B=B, pool=UNIFORM,
-                               magnitude=MAG, temperature=temperature, conc=conc)
+                               magnitude=MAG, temperature=temperature, conc=conc,
+                               announce_n=announce_n)
 
 
 def main() -> None:
@@ -157,6 +159,10 @@ def main() -> None:
                          "clip is what makes >1 safe, and it's untested at >1, so back up the "
                          "checkpoint dir first and watch mean_kl on the first steps)")
     ap.add_argument("--out", type=Path, default=Path("runs/rl_urn_pilot"))
+    ap.add_argument("--announce-n", action="store_true",
+                    help="train rollouts under the A2 condition (system prompt discloses exact N), "
+                         "matching the paper's evaluation condition; default off = the original "
+                         "no-announce training condition of runs/rl_urn_pilot")
     args = ap.parse_args()
 
     load_dotenv()
@@ -180,7 +186,8 @@ def main() -> None:
         seeds = list(range(next_seed, next_seed + args.seeds_per_step))
         print(f"\n=== outer step {step}: sampling {model_tag}, seeds {seeds[0]}-{seeds[-1]} "
               f"x G={args.G} ===", flush=True)
-        batch = asyncio.run(_collect(model_tag, seeds, args.G, args.temperature, args.conc))
+        batch = asyncio.run(_collect(model_tag, seeds, args.G, args.temperature, args.conc,
+                                     announce_n=args.announce_n))
         t_rollout = time.time()
         print(f"  resync (merge/GGUF/ollama create): {t_serve - t0:.0f}s", flush=True)
         print(f"  rollout collection: {t_rollout - t_serve:.0f}s ({len(batch)} episodes)", flush=True)

@@ -1,0 +1,394 @@
+{
+  "seed": 2016,
+  "model_key": "qwen-rl-a2-final:latest",
+  "vocab": "quiver",
+  "kept": {
+    "0": 2,
+    "5": 2,
+    "4": 5
+  },
+  "collected": 41,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 45,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 467,
+      "output_tokens": 32,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 534,
+      "output_tokens": 30,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 600,
+      "output_tokens": 28,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 663,
+      "output_tokens": 52,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 793,
+      "output_tokens": 29,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 859,
+      "output_tokens": 22,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 917,
+      "output_tokens": 37,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1017,
+      "output_tokens": 40,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1095,
+      "output_tokens": 27,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1184,
+      "output_tokens": 31,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1253,
+      "output_tokens": 35,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1429,
+      "output_tokens": 35,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1565,
+      "output_tokens": 48,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "0": "hawk",
+    "6": "raven",
+    "3": "owl",
+    "5": "falcon",
+    "4": "eagle",
+    "7": "kestrel",
+    "2": "heron",
+    "1": "crane"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "hawk",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: I need to see more arrows before deciding if the hawk feather is worth keeping. This could be a common feather, and keeping it too early might limit my options for other feathers.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 1,
+      "color": "raven",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: Same reasoning as before, I need to observe more arrows to gauge the rarity and potential benefit of keeping this feather.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 2,
+      "color": "owl",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: Still want to see more before making a decision, as I need better information about the distribution of feathers.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 3,
+      "color": "falcon",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a falcon arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: Observing more arrows is crucial to deciding which feather has the best potential for maximizing my collection.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 4,
+      "color": "hawk",
+      "class_id": 0,
+      "class_position": 2,
+      "prompt": "Draw 5 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nThink: The second hawk arrow suggests that this feather might be more common, which makes it less valuable to keep. However, if the third hawk (and potentially others) appear, I will lose out on collecting them automatically.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 7,
+      "color": "eagle",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 6: another hawk arrow (already kept -> auto-collected, +1); draw 7: another hawk arrow (already kept -> auto-collected, +1).) Draw 8 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: I need to assess the remaining feathers and their potential before deciding if the eagle feather is worth keeping.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 8,
+      "color": "kestrel",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 9 of 60: a kestrel arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: More information about other feathers is needed to make an informed decision.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 9,
+      "color": "eagle",
+      "class_id": 4,
+      "class_position": 2,
+      "prompt": "Draw 10 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: The second eagle suggests this feather might be more common, similar to the hawk, so I'll pass for now and wait for more draws.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 11,
+      "color": "falcon",
+      "class_id": 5,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 11: another hawk arrow (already kept -> auto-collected, +1).) Draw 12 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nThink: The second falcon indicates that this feather might be somewhat common, but keeping it still allows me to collect more arrows if I encounter other valuable feathers later.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 12,
+      "color": "kestrel",
+      "class_id": 7,
+      "class_position": 2,
+      "prompt": "Draw 13 of 60: a kestrel arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: Waiting for the last draw to see the most common feather might be optimal at this point.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 14,
+      "color": "eagle",
+      "class_id": 4,
+      "class_position": 3,
+      "prompt": "(Since your last choice: draw 14: another hawk arrow (already kept -> auto-collected, +1).) Draw 15 of 60: an eagle arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: The third eagle means this feather might be quite common, so I'll pass to avoid collecting more than necessary.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 15,
+      "color": "kestrel",
+      "class_id": 7,
+      "class_position": 3,
+      "prompt": "Draw 16 of 60: a kestrel arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: The fourth kestrel arrow suggests this feather is common, and I want to reserve my last keep for a more valuable option.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 21,
+      "color": "eagle",
+      "class_id": 4,
+      "class_position": 4,
+      "prompt": "(Since your last choice: draw 17: another falcon arrow (already kept -> auto-collected, +1); draw 18: another falcon arrow (already kept -> auto-collected, +1); draw 19: another falcon arrow (already kept -> auto-collected, +1); draw 20: another hawk arrow (already kept -> auto-collected, +1); draw 21: another hawk arrow (already kept -> auto-collected, +1).) Draw 22 of 60: an eagle arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nThink: The fifth eagle means this feather is quite common, and I'll pass to save my last keep for a potentially more valuable option.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 25,
+      "color": "eagle",
+      "class_id": 4,
+      "class_position": 5,
+      "prompt": "(Since your last choice: draw 23: another falcon arrow (already kept -> auto-collected, +1); draw 24: another hawk arrow (already kept -> auto-collected, +1); draw 25: another hawk arrow (already kept -> auto-collected, +1).) Draw 26 of 60: an eagle arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nThink: After observing the previous draws, it seems the eagle feather is quite common, but since I only have one keep left and many arrows remain, I'll take this opportunity to secure some additional points.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: I need to see more arrows before deciding if the hawk feather is worth keeping. This could be a common feather, and keeping it too early might limit my options for other feathers.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: Same reasoning as before, I need to observe more arrows to gauge the rarity and potential benefit of keeping this feather.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: Still want to see more before making a decision, as I need better information about the distribution of feathers.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a falcon arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: Observing more arrows is crucial to deciding which feather has the best potential for maximizing my collection.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nThink: The second hawk arrow suggests that this feather might be more common, which makes it less valuable to keep. However, if the third hawk (and potentially others) appear, I will lose out on collecting them automatically.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 6: another hawk arrow (already kept -> auto-collected, +1); draw 7: another hawk arrow (already kept -> auto-collected, +1).) Draw 8 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: I need to assess the remaining feathers and their potential before deciding if the eagle feather is worth keeping.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 9 of 60: a kestrel arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: More information about other feathers is needed to make an informed decision.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 10 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: The second eagle suggests this feather might be more common, similar to the hawk, so I'll pass for now and wait for more draws.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 11: another hawk arrow (already kept -> auto-collected, +1).) Draw 12 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nThink: The second falcon indicates that this feather might be somewhat common, but keeping it still allows me to collect more arrows if I encounter other valuable feathers later.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 13 of 60: a kestrel arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: Waiting for the last draw to see the most common feather might be optimal at this point.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 14: another hawk arrow (already kept -> auto-collected, +1).) Draw 15 of 60: an eagle arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: The third eagle means this feather might be quite common, so I'll pass to avoid collecting more than necessary.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 16 of 60: a kestrel arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: The fourth kestrel arrow suggests this feather is common, and I want to reserve my last keep for a more valuable option.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 17: another falcon arrow (already kept -> auto-collected, +1); draw 18: another falcon arrow (already kept -> auto-collected, +1); draw 19: another falcon arrow (already kept -> auto-collected, +1); draw 20: another hawk arrow (already kept -> auto-collected, +1); draw 21: another hawk arrow (already kept -> auto-collected, +1).) Draw 22 of 60: an eagle arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nThink: The fifth eagle means this feather is quite common, and I'll pass to save my last keep for a potentially more valuable option.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 23: another falcon arrow (already kept -> auto-collected, +1); draw 24: another hawk arrow (already kept -> auto-collected, +1); draw 25: another hawk arrow (already kept -> auto-collected, +1).) Draw 26 of 60: an eagle arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nThink: After observing the previous draws, it seems the eagle feather is quite common, but since I only have one keep left and many arrows remain, I'll take this opportunity to secure some additional points.\n\nDECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

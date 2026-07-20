@@ -1,0 +1,108 @@
+{
+  "seed": 2008,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "quiver",
+  "kept": {
+    "3": 1,
+    "7": 1,
+    "0": 1
+  },
+  "collected": 17,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 51,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 473,
+      "output_tokens": 64,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 617,
+      "output_tokens": 50,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "3": "hawk",
+    "7": "raven",
+    "0": "owl",
+    "1": "falcon",
+    "5": "eagle",
+    "4": "kestrel",
+    "2": "heron",
+    "6": "crane"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "hawk",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "DECISION: KEEP\n\nBy keeping this first arrow, you lock in all future arrows of this feather (hawk), which maximizes the potential number of arrows for that specific feather. It's an optimal early decision given no prior information about other feathers.",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 1,
+      "color": "raven",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "DECISION:KEEP\n\nKeeping this raven arrow ensures you'll receive all future raven arrows, which is beneficial as it diversifies your collection strategy and secures another feather early on. Given that both the hawk and raven feathers are guaranteed to be kept, focusing on securing more feathers is a wise approach.",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 4,
+      "color": "owl",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 3: another raven arrow (already kept -> auto-collected, +1); draw 4: another raven arrow (already kept -> auto-collected, +1).) Draw 5 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "DECISION: KEEP\n\nKeeping the owl arrow ensures you'll receive all future owl arrows and secures one last distinct feather for your collection. This decision maximizes the total number of arrows you can collect by locking in the remaining rarest feather.",
+      "response_model": "qwen-rl-base-q8:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "DECISION: KEEP\n\nBy keeping this first arrow, you lock in all future arrows of this feather (hawk), which maximizes the potential number of arrows for that specific feather. It's an optimal early decision given no prior information about other feathers."
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "DECISION:KEEP\n\nKeeping this raven arrow ensures you'll receive all future raven arrows, which is beneficial as it diversifies your collection strategy and secures another feather early on. Given that both the hawk and raven feathers are guaranteed to be kept, focusing on securing more feathers is a wise approach."
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 3: another raven arrow (already kept -> auto-collected, +1); draw 4: another raven arrow (already kept -> auto-collected, +1).) Draw 5 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "DECISION: KEEP\n\nKeeping the owl arrow ensures you'll receive all future owl arrows and secures one last distinct feather for your collection. This decision maximizes the total number of arrows you can collect by locking in the remaining rarest feather."
+    }
+  ],
+  "termination": "budget_exhausted"
+}

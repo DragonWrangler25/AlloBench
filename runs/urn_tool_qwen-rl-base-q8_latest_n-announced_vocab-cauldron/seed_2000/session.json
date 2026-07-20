@@ -1,0 +1,480 @@
+{
+  "seed": 2000,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "cauldron",
+  "modality": "tool",
+  "tool_choice": "required",
+  "kept": {
+    "6": 1,
+    "0": 1,
+    "3": 5
+  },
+  "collected": 31,
+  "budget": 3,
+  "unparsed": 11,
+  "turn_usages": [
+    {
+      "input_tokens": 604,
+      "output_tokens": 19,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 669,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 734,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 781,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 828,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 918,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 965,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1014,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1107,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1181,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1255,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1329,
+      "output_tokens": 8,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1378,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1427,
+      "output_tokens": 2,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1503,
+      "output_tokens": 18,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "6": "frost",
+    "0": "ember",
+    "4": "venom",
+    "7": "mist",
+    "1": "thorn",
+    "3": "spark",
+    "5": "gale"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "frost",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 1,
+      "color": "ember",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an ember potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 2,
+      "color": "venom",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 3,
+      "color": "venom",
+      "class_id": 4,
+      "class_position": 2,
+      "prompt": "Draw 4 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 4,
+      "color": "mist",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 5 of 60: a mist potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 7,
+      "color": "venom",
+      "class_id": 4,
+      "class_position": 3,
+      "prompt": "(Since your last choice: draw 6: another frost potion (already kept -> auto-collected, +1); draw 7: another frost potion (already kept -> auto-collected, +1).) Draw 8 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 8,
+      "color": "venom",
+      "class_id": 4,
+      "class_position": 4,
+      "prompt": "Draw 9 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 9,
+      "color": "thorn",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "Draw 10 of 60: a thorn potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 12,
+      "color": "spark",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 11: another frost potion (already kept -> auto-collected, +1); draw 12: another frost potion (already kept -> auto-collected, +1).) Draw 13 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 14,
+      "color": "spark",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 14: another frost potion (already kept -> auto-collected, +1).) Draw 15 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 16,
+      "color": "spark",
+      "class_id": 3,
+      "class_position": 3,
+      "prompt": "(Since your last choice: draw 16: another frost potion (already kept -> auto-collected, +1).) Draw 17 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 18,
+      "color": "venom",
+      "class_id": 4,
+      "class_position": 5,
+      "prompt": "(Since your last choice: draw 18: another frost potion (already kept -> auto-collected, +1).) Draw 19 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```\n",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 19,
+      "color": "spark",
+      "class_id": 3,
+      "class_position": 4,
+      "prompt": "Draw 20 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 20,
+      "color": "gale",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 21 of 60: a gale potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 21,
+      "color": "spark",
+      "class_id": 3,
+      "class_position": 5,
+      "prompt": "Draw 22 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "```json\n\n```\n\n```",
+      "n_tool_calls": 1
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_bdeb424a",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_bdeb424a",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an ember potion appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_60326f89",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_60326f89",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a mist potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 6: another frost potion (already kept -> auto-collected, +1); draw 7: another frost potion (already kept -> auto-collected, +1).) Draw 8 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 9 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 10 of 60: a thorn potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 11: another frost potion (already kept -> auto-collected, +1); draw 12: another frost potion (already kept -> auto-collected, +1).) Draw 13 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 14: another frost potion (already kept -> auto-collected, +1).) Draw 15 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 16: another frost potion (already kept -> auto-collected, +1).) Draw 17 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 18: another frost potion (already kept -> auto-collected, +1).) Draw 19 of 60: a venom potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```\n"
+    },
+    {
+      "role": "user",
+      "content": "Draw 20 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 21 of 60: a gale potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_2d3b7bf2",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_2d3b7bf2",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 22 of 60: a spark potion appears. You have 1 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_f49ea8e0",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_f49ea8e0",
+      "content": "{\"ok\": true}"
+    }
+  ]
+}

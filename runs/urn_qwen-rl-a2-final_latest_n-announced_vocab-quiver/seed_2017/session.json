@@ -1,0 +1,342 @@
+{
+  "seed": 2017,
+  "model_key": "qwen-rl-a2-final:latest",
+  "vocab": "quiver",
+  "kept": {
+    "3": 2,
+    "5": 3,
+    "1": 4
+  },
+  "collected": 44,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 32,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 454,
+      "output_tokens": 28,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 517,
+      "output_tokens": 17,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 570,
+      "output_tokens": 30,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 635,
+      "output_tokens": 22,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 693,
+      "output_tokens": 52,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 780,
+      "output_tokens": 24,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 840,
+      "output_tokens": 22,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 898,
+      "output_tokens": 47,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1010,
+      "output_tokens": 25,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1071,
+      "output_tokens": 20,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1127,
+      "output_tokens": 40,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "4": "hawk",
+    "3": "raven",
+    "1": "owl",
+    "5": "falcon",
+    "6": "eagle",
+    "2": "kestrel",
+    "0": "heron",
+    "7": "crane"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "hawk",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nYou need to see more feathers before deciding to keep an arrow, as you might encounter rarer ones later that would be more beneficial to collect.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 1,
+      "color": "raven",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nObserving more draws will help you determine the frequency and rarity of each feather, which is crucial for maximizing your total collection.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 2,
+      "color": "owl",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nContinue observing to see if more valuable feathers appear later in the sequence.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 3,
+      "color": "falcon",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a falcon arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nWait and observe more draws to gather information about the frequency of each feather type. This will help you make a more informed decision later.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 4,
+      "color": "eagle",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 5 of 60: an eagle arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nIt's better to see more arrows first to understand the distribution of feathers before making a decision.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 5,
+      "color": "raven",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "Draw 6 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP\n\nSince two raven arrows have now appeared in the first six draws, it suggests that raven is relatively common, and keeping this one will ensure you collect all future ravens for free. This leaves you with two choices for the remaining feathers.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 6,
+      "color": "owl",
+      "class_id": 1,
+      "class_position": 2,
+      "prompt": "Draw 7 of 60: an owl arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nWait and see if more owls appear in the remaining draws to assess their frequency before making a decision.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 7,
+      "color": "falcon",
+      "class_id": 5,
+      "class_position": 2,
+      "prompt": "Draw 8 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nContinue observing to gather more information about the distribution of feathers and make a more strategic decision later.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 8,
+      "color": "falcon",
+      "class_id": 5,
+      "class_position": 3,
+      "prompt": "Draw 9 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP\n\nTwo falcon arrows have appeared in the first nine draws, indicating that it could be a relatively common feather. Keeping this one ensures you collect all future falcons for free, leaving you with two more choices to make.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 10,
+      "color": "kestrel",
+      "class_id": 2,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 10: another raven arrow (already kept -> auto-collected, +1).) Draw 11 of 60: a kestrel arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nObserve more draws to see if the kestrel is a common or rare feather before making a decision.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 11,
+      "color": "owl",
+      "class_id": 1,
+      "class_position": 3,
+      "prompt": "Draw 12 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\nWait and see how many owl arrows there are in total to make an informed decision.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 12,
+      "color": "owl",
+      "class_id": 1,
+      "class_position": 4,
+      "prompt": "Draw 13 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP\n\nThree owl arrows have appeared, suggesting it's a relatively common feather. Keeping this one guarantees you'll collect all future owls for free, leaving you with one more choice to make.",
+      "response_model": "qwen-rl-a2-final:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nYou need to see more feathers before deciding to keep an arrow, as you might encounter rarer ones later that would be more beneficial to collect."
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nObserving more draws will help you determine the frequency and rarity of each feather, which is crucial for maximizing your total collection."
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nContinue observing to see if more valuable feathers appear later in the sequence."
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a falcon arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nWait and observe more draws to gather information about the frequency of each feather type. This will help you make a more informed decision later."
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: an eagle arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nIt's better to see more arrows first to understand the distribution of feathers before making a decision."
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nSince two raven arrows have now appeared in the first six draws, it suggests that raven is relatively common, and keeping this one will ensure you collect all future ravens for free. This leaves you with two choices for the remaining feathers."
+    },
+    {
+      "role": "user",
+      "content": "Draw 7 of 60: an owl arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nWait and see if more owls appear in the remaining draws to assess their frequency before making a decision."
+    },
+    {
+      "role": "user",
+      "content": "Draw 8 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nContinue observing to gather more information about the distribution of feathers and make a more strategic decision later."
+    },
+    {
+      "role": "user",
+      "content": "Draw 9 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nTwo falcon arrows have appeared in the first nine draws, indicating that it could be a relatively common feather. Keeping this one ensures you collect all future falcons for free, leaving you with two more choices to make."
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 10: another raven arrow (already kept -> auto-collected, +1).) Draw 11 of 60: a kestrel arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nObserve more draws to see if the kestrel is a common or rare feather before making a decision."
+    },
+    {
+      "role": "user",
+      "content": "Draw 12 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nWait and see how many owl arrows there are in total to make an informed decision."
+    },
+    {
+      "role": "user",
+      "content": "Draw 13 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nThree owl arrows have appeared, suggesting it's a relatively common feather. Keeping this one guarantees you'll collect all future owls for free, leaving you with one more choice to make."
+    }
+  ],
+  "termination": "budget_exhausted"
+}

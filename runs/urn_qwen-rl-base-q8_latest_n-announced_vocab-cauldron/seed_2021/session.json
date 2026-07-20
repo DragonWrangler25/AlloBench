@@ -1,0 +1,288 @@
+{
+  "seed": 2021,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "cauldron",
+  "kept": {
+    "0": 1,
+    "2": 2,
+    "3": 6
+  },
+  "collected": 50,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 390,
+      "output_tokens": 29,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 454,
+      "output_tokens": 50,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 539,
+      "output_tokens": 32,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 606,
+      "output_tokens": 30,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 671,
+      "output_tokens": 40,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 746,
+      "output_tokens": 38,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 862,
+      "output_tokens": 33,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 995,
+      "output_tokens": 33,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1109,
+      "output_tokens": 30,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1201,
+      "output_tokens": 38,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "3": "frost",
+    "0": "ember",
+    "5": "venom",
+    "2": "mist",
+    "6": "thorn",
+    "7": "spark"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "frost",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\n(Thinking: I don't know if this label is common or rare, so I'll pass for now to gather more information.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 1,
+      "color": "ember",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an ember potion appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP\n\n(Thinking: This is a new label, and keeping it will lock in all future occurrences of this potion for free. With 3 keeps left, I have room to be cautious, but it's worth locking in one new label.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 2,
+      "color": "venom",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: a venom potion appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\n(Thinking: I've already kept one label and don't know the distribution yet, so it's safer to continue observing before making another commitment.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 3,
+      "color": "mist",
+      "class_id": 2,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a mist potion appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\n(Thinking: I still want to gather more data before committing to another label, as I don't know how frequent these potions are.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 4,
+      "color": "mist",
+      "class_id": 2,
+      "class_position": 2,
+      "prompt": "Draw 5 of 60: a mist potion appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP\n\n(Thinking: Seeing the same label twice suggests it might be more common, and since I have two keeps remaining, this seems like a good opportunity to lock in a potentially favorable label.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 5,
+      "color": "frost",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "Draw 6 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\n(Thinking: Although it's the same as an earlier draw, I don't want to use my last keep on a potentially less common label until I've seen more occurrences.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 8,
+      "color": "frost",
+      "class_id": 3,
+      "class_position": 3,
+      "prompt": "(Since your last choice: draw 7: another ember potion (already kept -> auto-collected, +1); draw 8: another mist potion (already kept -> auto-collected, +1).) Draw 9 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\n(Thinking: I've already seen this label before and don't want to risk using my last keep on what is likely not the most frequent label.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 12,
+      "color": "frost",
+      "class_id": 3,
+      "class_position": 4,
+      "prompt": "(Since your last choice: draw 10: another ember potion (already kept -> auto-collected, +1); draw 11: another ember potion (already kept -> auto-collected, +1); draw 12: another ember potion (already kept -> auto-collected, +1).) Draw 13 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\n(Thinking: I've seen multiple occurrences of the ember label and don't want to risk using my last keep on what is likely not as common.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 15,
+      "color": "frost",
+      "class_id": 3,
+      "class_position": 5,
+      "prompt": "(Since your last choice: draw 14: another mist potion (already kept -> auto-collected, +1); draw 15: another ember potion (already kept -> auto-collected, +1).) Draw 16 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS\n\n(Thinking: Given that the ember label has seen multiple draws and mist is already secured, passing on frost again is the safer choice.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 17,
+      "color": "frost",
+      "class_id": 3,
+      "class_position": 6,
+      "prompt": "(Since your last choice: draw 17: another ember potion (already kept -> auto-collected, +1).) Draw 18 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP\n\n(Thinking: With only one keep remaining and having seen multiple occurrences of the frost label combined with the other locked-in labels, it seems wise to secure the frost label now.)",
+      "response_model": "qwen-rl-base-q8:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\n(Thinking: I don't know if this label is common or rare, so I'll pass for now to gather more information.)"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an ember potion appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\n(Thinking: This is a new label, and keeping it will lock in all future occurrences of this potion for free. With 3 keeps left, I have room to be cautious, but it's worth locking in one new label.)"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a venom potion appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\n(Thinking: I've already kept one label and don't know the distribution yet, so it's safer to continue observing before making another commitment.)"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a mist potion appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\n(Thinking: I still want to gather more data before committing to another label, as I don't know how frequent these potions are.)"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a mist potion appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\n(Thinking: Seeing the same label twice suggests it might be more common, and since I have two keeps remaining, this seems like a good opportunity to lock in a potentially favorable label.)"
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\n(Thinking: Although it's the same as an earlier draw, I don't want to use my last keep on a potentially less common label until I've seen more occurrences.)"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 7: another ember potion (already kept -> auto-collected, +1); draw 8: another mist potion (already kept -> auto-collected, +1).) Draw 9 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\n(Thinking: I've already seen this label before and don't want to risk using my last keep on what is likely not the most frequent label.)"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 10: another ember potion (already kept -> auto-collected, +1); draw 11: another ember potion (already kept -> auto-collected, +1); draw 12: another ember potion (already kept -> auto-collected, +1).) Draw 13 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\n(Thinking: I've seen multiple occurrences of the ember label and don't want to risk using my last keep on what is likely not as common.)"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 14: another mist potion (already kept -> auto-collected, +1); draw 15: another ember potion (already kept -> auto-collected, +1).) Draw 16 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\n(Thinking: Given that the ember label has seen multiple draws and mist is already secured, passing on frost again is the safer choice.)"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 17: another ember potion (already kept -> auto-collected, +1).) Draw 18 of 60: a frost potion appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\n(Thinking: With only one keep remaining and having seen multiple occurrences of the frost label combined with the other locked-in labels, it seems wise to secure the frost label now.)"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

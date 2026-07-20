@@ -1,0 +1,134 @@
+{
+  "seed": 2023,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "quiver",
+  "kept": {
+    "0": 1,
+    "6": 1,
+    "1": 2
+  },
+  "collected": 36,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 26,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 473,
+      "output_tokens": 28,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 597,
+      "output_tokens": 24,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 656,
+      "output_tokens": 34,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "0": "hawk",
+    "6": "raven",
+    "1": "owl",
+    "3": "falcon",
+    "7": "eagle",
+    "4": "kestrel",
+    "5": "heron",
+    "2": "crane"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "hawk",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "I'll start by keeping this unique feather to secure as many matching arrows as possible later in the game.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 2,
+      "color": "raven",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 2: another hawk arrow (already kept -> auto-collected, +1).) Draw 3 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "Given that I already secured the hawk feather, I'll now focus on keeping the raven to maximize my collection.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 6,
+      "color": "owl",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 4: another hawk arrow (already kept -> auto-collected, +1); draw 5: another hawk arrow (already kept -> auto-collected, +1); draw 6: another hawk arrow (already kept -> auto-collected, +1).) Draw 7 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "I'll hold off on keeping the owl for now to see if more unique feathers appear later.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 7,
+      "color": "owl",
+      "class_id": 1,
+      "class_position": 2,
+      "prompt": "Draw 8 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "Since I already passed the first owl, and this is the second one, it's still worth considering keeping now to secure more owls later.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'll start by keeping this unique feather to secure as many matching arrows as possible later in the game.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 2: another hawk arrow (already kept -> auto-collected, +1).) Draw 3 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "Given that I already secured the hawk feather, I'll now focus on keeping the raven to maximize my collection.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 4: another hawk arrow (already kept -> auto-collected, +1); draw 5: another hawk arrow (already kept -> auto-collected, +1); draw 6: another hawk arrow (already kept -> auto-collected, +1).) Draw 7 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'll hold off on keeping the owl for now to see if more unique feathers appear later.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 8 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "Since I already passed the first owl, and this is the second one, it's still worth considering keeping now to secure more owls later.\n\nDECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

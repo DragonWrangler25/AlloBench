@@ -1,0 +1,133 @@
+{
+  "seed": 2005,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "quiver",
+  "kept": {
+    "3": 1,
+    "6": 1,
+    "1": 1
+  },
+  "collected": 53,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 44,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 491,
+      "output_tokens": 65,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 591,
+      "output_tokens": 60,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 712,
+      "output_tokens": 54,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "3": "hawk",
+    "7": "raven",
+    "6": "owl",
+    "1": "falcon",
+    "2": "eagle",
+    "0": "kestrel",
+    "4": "heron"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "hawk",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "This is the first draw, and we don't yet know how common the hawk feather is, but it's reasonable to start by keeping an arrow of this type to see how many more appear.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 2,
+      "color": "raven",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 2: another hawk arrow (already kept -> auto-collected, +1).) Draw 3 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "Since we've already seen another hawk, it's likely that hawks are somewhat common. It's still early in the game, so we want to be cautious with limited keeps. A raven, being a new feather type, might be worth keeping if we think they could be fewer in number.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 3,
+      "color": "owl",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: an owl arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "The hawk feather seems to appear at least twice so far, but we haven't seen another raven yet. Owl is a new type, and since we only have two keeps left, it's worth considering keeping the owl just in case there aren\u2019t many of this feather.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 5,
+      "color": "falcon",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 5: another owl arrow (already kept -> auto-collected, +1).) Draw 6 of 60: a falcon arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "We\u2019ve seen two hawks and two owls so far, which gives us some indication that both might be somewhat common feathers. Since we only have one keep left and the falcon is a new type, it's reasonable to keep it.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "This is the first draw, and we don't yet know how common the hawk feather is, but it's reasonable to start by keeping an arrow of this type to see how many more appear.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 2: another hawk arrow (already kept -> auto-collected, +1).) Draw 3 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "Since we've already seen another hawk, it's likely that hawks are somewhat common. It's still early in the game, so we want to be cautious with limited keeps. A raven, being a new feather type, might be worth keeping if we think they could be fewer in number.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: an owl arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "The hawk feather seems to appear at least twice so far, but we haven't seen another raven yet. Owl is a new type, and since we only have two keeps left, it's worth considering keeping the owl just in case there aren\u2019t many of this feather.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 5: another owl arrow (already kept -> auto-collected, +1).) Draw 6 of 60: a falcon arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "We\u2019ve seen two hawks and two owls so far, which gives us some indication that both might be somewhat common feathers. Since we only have one keep left and the falcon is a new type, it's reasonable to keep it.\n\nDECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}
