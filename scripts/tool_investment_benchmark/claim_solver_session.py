@@ -68,6 +68,15 @@ _ap.add_argument("--selftest", action="store_true",
                       "claim, auto-solve, budget exhaustion -- `docs/framing-ladder-spec.md` §6 step 1) "
                       "against a scripted FakeClient, no network/API calls, then exit -- does not run "
                       "the real CLI.")
+_ap.add_argument("--reasoning-effort", default="none",
+                 help="OpenAI reasoning_effort for GPT/reasoning models. Defaults to 'none' to match "
+                      "the rest of the panel (arm_a1_announce.py / run_economic_surface.py) AND because "
+                      "gpt-5.4-mini rejects function tools with any non-'none' effort on "
+                      "/v1/chat/completions (400). Ignored for Claude (its chat_tools path takes no "
+                      "reasoning_effort).")
+_ap.add_argument("--progress", action="store_true",
+                 help="print a per-problem decision line within each seed (seed, problem n/T, decision, "
+                      "running claims/budget). Off by default so batch runs stay quiet.")
 _ARGS = _ap.parse_known_args()[0]
 MODEL_KEY = _ARGS.model
 MODEL_STR = CLAUDE.get(MODEL_KEY, MODEL_KEY)      # Claude key -> id; else pass the raw tag through
@@ -148,7 +157,9 @@ def cost_of(turn_usages):
 
 
 async def run_episode_claim(client, model, slots: list[dict], *, T: int, B: int, system: str,
-                            temperature: float | None = None, tool_choice: str = "required") -> dict:
+                            temperature: float | None = None, tool_choice: str = "required",
+                            tag: str = "", reasoning_effort: str | None = None,
+                            progress: bool = False) -> dict:
     """Declarative-claim analogue of `urn_tool_session.run_episode_tool` -- byte-parallel per-draw
     loop (see module docstring for the correspondence), only the tool-pair name and per-problem
     prompt text (the real problem's `question` field, from the SAME stream `arm_a1_announce.py`
@@ -185,7 +196,8 @@ async def run_episode_claim(client, model, slots: list[dict], *, T: int, B: int,
         # mechanics-parity claim `ladder_parity_selftest.py` verifies.
         turn, exc = await call_with_retry(
             lambda: client.chat_tools(model, system, messages, tools, max_tokens=1500,
-                                      temperature=temperature, tool_choice=tool_choice))
+                                      temperature=temperature, tool_choice=tool_choice,
+                                      reasoning_effort=reasoning_effort))
         if exc is None:
             u = dict(client.last_usage or {})
         else:
@@ -218,6 +230,9 @@ async def run_episode_claim(client, model, slots: list[dict], *, T: int, B: int,
         if dec == "CLAIM_SOLVER":
             claimed[cid] = pos
             budget_left -= 1
+        if progress:
+            print(f"    [seed {tag}] problem {n}/{T}: {dec:13s} claims={len(claimed)}/{B} "
+                  f"budget_left={budget_left}", flush=True)
     collected = _balls_collected(slots, claimed)
 
     return {"claimed": claimed, "collected": collected, "budget": B, "unparsed": unparsed,
@@ -236,7 +251,8 @@ async def run_one(client, model, seed):
 
     system = render_system_claim(T, B, N, ANNOUNCE_N)
     row = await run_episode_claim(client, model, slots, T=T, B=B, system=system,
-                                  temperature=_ARGS.temp, tool_choice=TOOL_CHOICE)
+                                  temperature=_ARGS.temp, tool_choice=TOOL_CHOICE, tag=str(seed),
+                                  reasoning_effort=_ARGS.reasoning_effort, progress=_ARGS.progress)
     row = {"seed": seed, "model_key": MODEL_KEY, "modality": "tool-claim",
            "tool_choice": TOOL_CHOICE, **row}
     (d / "session.json").write_text(json.dumps(row, indent=2))
@@ -341,7 +357,8 @@ def _selftest():
             self.calls = 0
             self.last_usage = {"input_tokens": 1, "output_tokens": 1}
 
-        async def chat_tools(self, model, system, messages, tools, max_tokens, temperature, tool_choice):
+        async def chat_tools(self, model, system, messages, tools, max_tokens, temperature,
+                             tool_choice, reasoning_effort=None):
             self.calls += 1
             name = self.plan.pop(0)
             return ChatTurn(content="", tool_calls=[{"id": f"c{self.calls}", "name": name, "arguments": "{}"}])
