@@ -1,0 +1,341 @@
+{
+  "seed": 2009,
+  "model_key": "qwen-rl-a2-final:latest",
+  "vocab": "quiver",
+  "kept": {
+    "6": 3,
+    "0": 3,
+    "3": 3
+  },
+  "collected": 32,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 52,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 473,
+      "output_tokens": 46,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 555,
+      "output_tokens": 49,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 639,
+      "output_tokens": 53,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 727,
+      "output_tokens": 45,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 808,
+      "output_tokens": 46,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 889,
+      "output_tokens": 42,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 967,
+      "output_tokens": 47,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1049,
+      "output_tokens": 37,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1122,
+      "output_tokens": 42,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1200,
+      "output_tokens": 45,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1282,
+      "output_tokens": 43,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "6": "hawk",
+    "3": "raven",
+    "1": "owl",
+    "5": "falcon",
+    "0": "eagle",
+    "4": "kestrel",
+    "2": "heron"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "hawk",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: I haven't seen enough arrows yet to determine if this is one of the more common feathers or if it's rare. It would be prudent to see more of the quiver before committing to keeping an arrow.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 1,
+      "color": "hawk",
+      "class_id": 6,
+      "class_position": 2,
+      "prompt": "Draw 2 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: Seeing a second hawk arrow suggests that hawks might be somewhat common, but I still haven't seen enough arrows to make a confident decision. I should keep observing the quiver.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 2,
+      "color": "raven",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: While it's good to see diversity in feathers, I haven't observed enough arrows yet to determine the frequency of the ravens. Observing more should give me a better sense of their prevalence.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 3,
+      "color": "owl",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: The owl feather is the fourth distinct feather I've seen, and without more context about how common it is within the quiver, it's too early to make a decision. Continued observation will help determine its frequency.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 4,
+      "color": "hawk",
+      "class_id": 6,
+      "class_position": 3,
+      "prompt": "Draw 5 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nJustification: Seeing three hawk arrows now suggests that hawks are likely to be a frequent feather in the quiver. Keeping this one will secure all future occurrences of the hawk feather automatically.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 5,
+      "color": "raven",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "Draw 6 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: While I've seen two ravens so far, I need to observe more arrows to determine if they are common enough to warrant keeping one now. Continued observation will provide better insight.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 6,
+      "color": "owl",
+      "class_id": 1,
+      "class_position": 2,
+      "prompt": "Draw 7 of 60: an owl arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: With only two distinct feathers (hawk and raven) secured, it's important to continue observing to see which other feathers are frequent enough before making a decision.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 7,
+      "color": "falcon",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 8 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: The falcon feather is now the first new feather to appear in a while, so it's prudent to see more arrows before deciding if falcons are common enough to warrant keeping one.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 8,
+      "color": "eagle",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 9 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: The eagle feather is another new feather, and I need to observe more arrows to determine its frequency before making a decision to keep it.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 9,
+      "color": "eagle",
+      "class_id": 0,
+      "class_position": 2,
+      "prompt": "Draw 10 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nJustification: Seeing two eagles suggests they might be somewhat common, but I want to see more arrows before committing to keeping one. Further observation will help determine their frequency.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 10,
+      "color": "eagle",
+      "class_id": 0,
+      "class_position": 3,
+      "prompt": "Draw 11 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nJustification: Seeing three eagle arrows now suggests that eagles are likely to be a frequent feather in the quiver. Keeping this one will secure all future occurrences of the eagle feather automatically.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 11,
+      "color": "raven",
+      "class_id": 3,
+      "class_position": 3,
+      "prompt": "Draw 12 of 60: a raven arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nJustification: Having seen four ravens now, it is clear that ravens are becoming relatively common. Keeping this one will secure all future occurrences of the raven feather automatically.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: I haven't seen enough arrows yet to determine if this is one of the more common feathers or if it's rare. It would be prudent to see more of the quiver before committing to keeping an arrow.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: Seeing a second hawk arrow suggests that hawks might be somewhat common, but I still haven't seen enough arrows to make a confident decision. I should keep observing the quiver.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: While it's good to see diversity in feathers, I haven't observed enough arrows yet to determine the frequency of the ravens. Observing more should give me a better sense of their prevalence.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: The owl feather is the fourth distinct feather I've seen, and without more context about how common it is within the quiver, it's too early to make a decision. Continued observation will help determine its frequency.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nJustification: Seeing three hawk arrows now suggests that hawks are likely to be a frequent feather in the quiver. Keeping this one will secure all future occurrences of the hawk feather automatically.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: While I've seen two ravens so far, I need to observe more arrows to determine if they are common enough to warrant keeping one now. Continued observation will provide better insight.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 7 of 60: an owl arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: With only two distinct feathers (hawk and raven) secured, it's important to continue observing to see which other feathers are frequent enough before making a decision.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 8 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: The falcon feather is now the first new feather to appear in a while, so it's prudent to see more arrows before deciding if falcons are common enough to warrant keeping one.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 9 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: The eagle feather is another new feather, and I need to observe more arrows to determine its frequency before making a decision to keep it.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 10 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nJustification: Seeing two eagles suggests they might be somewhat common, but I want to see more arrows before committing to keeping one. Further observation will help determine their frequency.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 11 of 60: an eagle arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nJustification: Seeing three eagle arrows now suggests that eagles are likely to be a frequent feather in the quiver. Keeping this one will secure all future occurrences of the eagle feather automatically.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 12 of 60: a raven arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nJustification: Having seen four ravens now, it is clear that ravens are becoming relatively common. Keeping this one will secure all future occurrences of the raven feather automatically.\n\nDECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

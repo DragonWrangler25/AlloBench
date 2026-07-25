@@ -1,0 +1,235 @@
+"""Agent loop for ONE tool-investment session: drives a tool-calling model over N distinct
+problems presented one at a time, against a SessionState (in-process). Enforces a single HARD
+cumulative token cap for the whole session and never crashes on a malformed/odd tool call.
+
+The model solves the current problem (writing/running/reusing scripts as it sees fit) and calls
+submit_answer to advance. We present the next problem as a new user turn whenever the session's
+current-problem pointer moves. A problem on which the model produces two consecutive turns with
+no tool call is force-advanced (left unsubmitted) so the session keeps going.
+"""
+
+from __future__ import annotations
+
+import json
+import time
+
+from scripts.session.raw_chat import RawChat
+from scripts.session.prompts import (
+    CLASS_BOUND_SCRIPT_NOTE, problem_prompt, system_prompt)
+from scripts.session.session_state import SessionState, TOOL_SCHEMAS
+
+MIN_CALL_BUDGET = 256
+DEFAULT_MAX_TOKENS = 2048
+
+# Format-recovery nudge (2026-07-06): fires whenever a turn produces zero parseable tool calls. The
+# system prompt's <tools> block states the <tool_call>{...}</tool_call> wrapper syntax exactly ONCE, at
+# the very start of what can be a 300k-token, 60-problem session -- by problem 5-10 it's far back in
+# context. Symptom observed across several fine-tuned checkpoints: the model knows WHICH tools exist
+# (it never invents a nonexistent tool once actually inside a tool_calls structure) but drifts into
+# base-model surface habits over a long session -- markdown ```json fences, invented pseudo-tags, a
+# near-miss tool name ("submit_answers"), or plain repeated text -- none of which raw_chat's parser can
+# read as a real tool call. The original nudge listed valid tool NAMES but never restated the wrapper
+# SYNTAX, so it couldn't correct a model that had lost the format, only one that forgot the vocabulary.
+# This reminder restates the exact <tool_call> XML the hermes/Ollama parser reads (same string
+# train_lora.verify_template asserts against), so it re-anchors the format at exactly the moment format
+# drift is detected, rather than relying on a single mention at turn 0 to survive the whole session.
+FORMAT_REMINDER = (
+    "Use the tools to proceed. Respond with a REAL tool call -- not plain text, not a markdown code "
+    "block, not an invented tag -- in exactly this form:\n"
+    "<tool_call>\n{\"name\": \"<tool_name>\", \"arguments\": {<json object>}}\n</tool_call>\n"
+    "Available tools: write_script / run_script / list_scripts / read_script / submit_answer."
+)
+
+# Escalated reminder for the specific empty-```json```-fence collapse (2026-07-09 idle-tail work): the
+# 14b model degenerates into emitting a bare, empty markdown fence with no tool call, and (once a few of
+# them are in context) copies that pattern turn after turn. Fired on the 2nd+ consecutive no-tool turn
+# in the hard-retry path, it names the failure explicitly and demands a single tool call.
+EMPTY_FENCE_REMINDER = (
+    "Your last message contained NO tool call (an empty code fence or plain text). Do NOT emit ```json "
+    "or any empty fence. Emit exactly ONE tool call now and nothing else, in this exact form:\n"
+    "<tool_call>\n{\"name\": \"<tool_name>\", \"arguments\": {<json object>}}\n</tool_call>\n"
+    "Available tools: write_script / run_script / list_scripts / read_script / submit_answer."
+)
+_REMINDERS = (FORMAT_REMINDER, EMPTY_FENCE_REMINDER)
+
+
+def _est_tokens(system: str, messages: list, turn) -> int:
+    n = len(system) + len(json.dumps(messages))
+    n += len(turn.content or "") + sum(len(tc["arguments"]) + 24 for tc in turn.tool_calls)
+    return max(1, n // 4)
+
+
+async def run_session(client: RawChat, model: str, state: SessionState, *,
+                      token_cap: int = 200_000, max_tokens: int = DEFAULT_MAX_TOKENS,
+                      max_turns: int | None = None, announce_cap: bool = True,
+                      stop_on_budget_exhausted: bool = False, progress_cb=None,
+                      temperature: float | None = None,
+                      prune_no_tool: bool = False, max_no_tool_retries: int = 2,
+                      stop_after_turn=None, reasoning_effort: str | None = None,
+                      tool_choice: str = "auto") -> dict:
+    """token_cap is always enforced as a hard ceiling. announce_cap=False ('no-cap' arm) hides it
+    from the model: the system prompt omits the budget paragraph and tool results omit
+    tokens_remaining — token_cap then acts only as a silent safety ceiling on cost.
+
+    Empty-fence hard-retry (idle-tail lever, 2026-07-09): with prune_no_tool=True, a turn that yields
+    no parseable tool call is DROPPED from the model's context (not committed) and the SAME problem is
+    re-prompted with an escalating format reminder, up to max_no_tool_retries attempts, before the
+    problem is force-advanced. This (a) keeps the model on the problem instead of abandoning the tail
+    and (b) prevents a wall of empty ```json``` fences from accumulating in context and self-reinforcing
+    the collapse. Defaults (prune_no_tool=False, max_no_tool_retries=2) reproduce the prior behavior
+    exactly: commit the empty turn, one FORMAT_REMINDER, then force-advance on the 2nd consecutive miss."""
+    t0 = time.time()
+    if max_turns is None:
+        max_turns = max(60, 15 * state.n)
+    tools = TOOL_SCHEMAS(class_bound=bool(state.class_bound))
+    known_tools = {t["function"]["name"] for t in tools}
+    system = system_prompt(state.n, state.budget, token_cap if announce_cap else None)
+    if state.class_bound:
+        system += CLASS_BOUND_SCRIPT_NOTE
+    if getattr(state, "announce_recurrence", False):   # awareness arm (appended so system_prompt's
+        from scripts.session.prompts import RECURRENCE_NOTE  # signature
+        system += RECURRENCE_NOTE                       # stays 3-arg for the AIME monkeypatch)
+    if getattr(state, "announce_n_types", None) is not None:   # A2 arm: disclose exact N (see
+        from scripts.session.prompts import n_types_note  # 2026-07-03 audit)
+        system += n_types_note(state.announce_n_types)
+
+    messages: list[dict] = [{"role": "user",
+                             "content": problem_prompt(state.current(), 1, state.n)}]
+    presented = 0                            # highest problem index already presented
+
+    spent = n_turns = n_tool_calls = n_malformed = n_unknown = consecutive_no_tool = 0
+    n_pruned_no_tool = n_forced_advances = 0
+    usage_estimated = False
+    last_finish = None
+    turn_usages: list[dict] = []          # per-turn exact usage + which tools it called (for cost model)
+
+    stopped_on_budget = False
+    safety_stop = None
+    while not state.done and n_turns < max_turns:
+        # early-stop pilot: once the write budget is spent, no further BUILD decisions are possible,
+        # so all decision signal (bait, lateness, which classes built) is final -- stop to save cost.
+        if stop_on_budget_exhausted and state.writes_remaining <= 0:
+            stopped_on_budget = True
+            break
+        remaining = token_cap - spent
+        if remaining < MIN_CALL_BUDGET:
+            break
+        call_max = max(64, min(max_tokens, remaining))
+        n_turns += 1
+        turn = await client.chat_tools(model, system, messages, tools, max_tokens=call_max,
+                                       temperature=temperature, reasoning_effort=reasoning_effort,
+                                       tool_choice=tool_choice)
+        last_finish = turn.finish_reason
+        u = client.last_usage
+        if u and (u.get("input_tokens") or u.get("output_tokens")):
+            spent += int(u.get("input_tokens", 0)) + int(u.get("output_tokens", 0))
+            turn_usages.append({
+                "tools": [tc["name"] for tc in turn.tool_calls],
+                "input_tokens": int(u.get("input_tokens", 0)),
+                "output_tokens": int(u.get("output_tokens", 0)),
+                "cache_read_tokens": int(u.get("cache_read_tokens", 0) or 0),
+                "cache_write_tokens": int(u.get("cache_write_tokens", 0) or 0),
+                "reasoning_tokens": int(u.get("reasoning_tokens", 0) or 0),
+                "response_model": getattr(client, "last_response_model", None),
+                "problem": state.cur})
+        else:
+            spent += _est_tokens(system, messages, turn)
+            usage_estimated = True
+        turn_stop_reason = stop_after_turn(turn_usages) if stop_after_turn is not None else None
+
+        asst = {"role": "assistant", "content": turn.content or ""}
+        if turn.tool_calls:
+            asst["tool_calls"] = [{"id": tc["id"], "type": "function",
+                                   "function": {"name": tc["name"], "arguments": tc["arguments"]}}
+                                  for tc in turn.tool_calls]
+        messages.append(asst)
+
+        if not turn.tool_calls:
+            if turn_stop_reason:
+                safety_stop = turn_stop_reason
+                break
+            consecutive_no_tool += 1
+            if prune_no_tool:
+                # drop the degenerate (no-tool) assistant turn so a wall of empty ```json``` fences
+                # never accumulates in context and self-reinforces the collapse
+                messages.pop()
+                n_pruned_no_tool += 1
+                # and drop any reminder we appended on the previous retry, so reminders don't stack
+                if messages and messages[-1]["role"] == "user" and messages[-1]["content"] in _REMINDERS:
+                    messages.pop()
+            retry_limit = max_no_tool_retries if prune_no_tool else 2
+            if consecutive_no_tool >= retry_limit:
+                # give up on this problem (left unsubmitted), force-advance so the session continues
+                n_forced_advances += 1
+                if not state.done:
+                    state.cur += 1
+                consecutive_no_tool = 0
+                if state.done:
+                    break
+                messages.append({"role": "user",
+                                 "content": problem_prompt(state.current(), state.cur + 1, state.n)})
+                presented = state.cur
+                continue
+            # escalating hard-retry on the SAME problem: plain wrapper reminder first, then an explicit
+            # "no empty fence" reminder on subsequent misses
+            reminder = _REMINDERS[min(consecutive_no_tool - 1, len(_REMINDERS) - 1)]
+            messages.append({"role": "user", "content": reminder})
+            continue
+        consecutive_no_tool = 0
+
+        for tc in turn.tool_calls:
+            n_tool_calls += 1
+            if tc["args"] is None:
+                n_malformed += 1
+                result = {"ok": False, "error": "malformed JSON in tool arguments — resend valid "
+                          "JSON matching the tool schema."}
+            elif tc["name"] not in known_tools:
+                n_unknown += 1
+                result = {"ok": False, "error": f"no such tool '{tc['name']}'. Available tools: "
+                          f"{sorted(known_tools)}."}
+            else:
+                result = state.call(tc["name"], tc["args"])
+            if announce_cap:
+                result = {**result, "tokens_remaining": max(0, token_cap - spent)}
+            messages.append({"role": "tool", "tool_call_id": tc["id"],
+                             "content": json.dumps(result)})
+
+        # present the next problem whenever the pointer has advanced
+        if not state.done and state.cur > presented:
+            messages.append({"role": "user",
+                             "content": problem_prompt(state.current(), state.cur + 1, state.n)})
+            presented = state.cur
+
+        if progress_cb is not None:
+            progress_cb(n_turns=n_turns, problem=min(state.cur + 1, state.n), n=state.n,
+                       spent=spent, elapsed=time.time() - t0,
+                       tools=[tc["name"] for tc in turn.tool_calls],
+                       writes_remaining=state.writes_remaining)
+        if turn_stop_reason and (state.writes_remaining > 0 or turn_stop_reason == "missing_usage"):
+            safety_stop = turn_stop_reason
+            break
+
+    score = state.score()
+    return {
+        "model": model,
+        **score,
+        "spent_tokens": spent,
+        "token_cap": token_cap,
+        "hit_cap": spent >= token_cap,
+        "stopped_on_budget": stopped_on_budget,
+        "stop_reason": safety_stop,
+        "problems_seen": state.cur,
+        "n_turns": n_turns,
+        "n_tool_calls": n_tool_calls,
+        "n_malformed_tool_calls": n_malformed,
+        "n_unknown_tool_calls": n_unknown,
+        "n_pruned_no_tool": n_pruned_no_tool,
+        "n_forced_advances": n_forced_advances,
+        "usage_estimated": usage_estimated,
+        "turn_usages": turn_usages,
+        "last_finish_reason": last_finish,
+        "scripts": dict(state.scripts),
+        "script_bindings": dict(state.script_class) if state.class_bound else {},
+        "transcript": messages,
+        "elapsed_s": round(time.time() - t0, 2),
+    }

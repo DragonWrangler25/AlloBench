@@ -1,0 +1,1571 @@
+[04:36:14] PHASE 1 start: A2 evals (existing checkpoint + base, all vocabs)
+[04:36:14] urn A2 qwen-rl-base-q8:latest (4 vocabs x 24 seeds)
+[04:40:04]   urn qwen-rl-base-q8:latest OK
+[04:40:04] urn_tool A2 qwen-rl-base-q8:latest (4 vocabs x 24 seeds)
+[04:47:50]   urn_tool qwen-rl-base-q8:latest OK
+[04:47:50] urn A2 qwen-rl-urn-final:latest (4 vocabs x 24 seeds)
+[04:50:12]   urn qwen-rl-urn-final:latest OK
+[04:50:12] urn_tool A2 qwen-rl-urn-final:latest (4 vocabs x 24 seeds)
+[05:01:50]   urn_tool qwen-rl-urn-final:latest OK
+[05:01:50] PHASE 1 done
+[05:01:50] PHASE 2 start: A2 retrain to 20 steps (resuming gated run in runs/rl_urn_pilot_a2)
+[09:16:51] PHASE 2 training exited rc=0; last log lines:
+[09:16:51] PHASE 3 start: merge + quantize + eval new A2 checkpoint
+[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠴ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠦ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠧ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠇ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠏ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠋ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠙ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠹ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠸ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components ⠼ [K[?25h[?2026l[?2026h[?25l[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 0% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 0% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 0% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 1% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 1% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 1% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 2% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 2% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 2% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 3% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 3% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 3% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 4% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 4% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 4% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 5% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 5% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 5% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 6% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 6% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 7% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 7% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 7% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 8% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 8% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 8% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 9% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 9% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 10% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 10% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 10% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 11% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 11% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 11% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 12% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 12% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 12% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 13% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 13% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 13% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 14% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 14% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 14% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 15% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 15% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 15% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 16% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 16% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 17% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 17% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 17% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 18% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 18% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 18% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 19% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 19% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 19% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 20% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 20% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 20% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 21% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 21% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 21% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 22% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 22% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 22% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 23% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 23% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 24% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 24% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 24% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 25% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 25% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 25% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 26% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 26% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 27% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 27% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 27% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 28% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 28% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 28% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 29% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 29% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 29% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 30% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 30% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 30% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 31% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 31% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 31% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 32% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 32% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 33% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 33% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 33% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 34% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 34% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 34% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 35% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 35% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 35% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 36% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 36% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 36% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 37% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 37% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 37% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 38% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 38% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 38% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 38% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 39% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 39% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 39% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 40% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 40% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 40% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 40% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 41% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 41% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 41% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 41% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 42% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 42% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 42% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 43% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 43% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 43% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 44% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 44% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 45% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 45% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 45% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 46% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 46% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 46% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 47% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 47% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 47% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 48% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 48% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 49% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 49% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 49% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 50% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 50% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 50% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 51% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 51% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 51% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 52% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 52% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 52% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 53% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 53% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 53% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 54% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 54% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 55% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 55% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 55% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 56% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 56% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 56% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 57% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 57% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 57% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 58% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 58% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 58% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 59% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 59% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 59% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 60% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 60% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 60% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 61% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 61% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 61% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 62% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 62% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 62% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 62% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 63% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 63% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 63% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 64% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 64% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 64% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 65% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 65% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 65% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 66% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 66% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 67% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 67% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 67% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 68% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 68% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 68% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 69% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 69% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 69% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 70% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 70% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 70% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 71% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 71% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 71% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 72% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 72% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 73% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 73% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 73% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 74% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 74% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 74% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 75% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 75% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 76% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 76% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 76% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 77% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 77% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 77% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 78% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 78% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 78% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 79% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 79% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 79% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 80% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 80% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 80% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 81% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 81% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 82% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 82% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 82% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 83% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 83% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 83% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 84% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 84% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 84% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 84% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 85% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 85% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 85% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 86% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 86% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 86% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 87% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 87% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 87% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 88% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 88% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 88% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 89% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 89% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 89% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 90% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 90% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 91% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 91% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 91% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 92% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 92% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 92% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 93% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 93% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 93% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 94% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 94% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 94% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 95% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 95% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 95% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 96% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 96% ⠋ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 96% ⠙ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 97% ⠹ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 97% ⠸ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 98% ⠼ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 98% ⠴ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 98% ⠦ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 99% ⠧ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 99% ⠇ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% ⠏ [K[?25h[?2026l[?2026h[?25l[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Ggathering model components [K
+copying file sha256:2792d9c137547c463612bb748baf2020addc76f5d657a9512ced5cdeeb63b54a 100% [K
+parsing GGUF [K
+verifying conversion [K
+creating new layer sha256:ec2e6073d207072031a7b8010132e186b16c9adf2e95a98cac98a813f967879e [K
+using existing layer sha256:fe0bb9a17f50cdacb92cf87e2d418b34fb8cd493db6d8299f21444f9dbc72129 [K
+using existing layer sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e [K
+using existing layer sha256:832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e [K
+using existing layer sha256:ce4a164fc04605703b485251fe9f1a181688ba0eb6badb80cc6335c0de17ca0d [K
+writing manifest [K
+success [K[?25h[?2026l
+[09:21:59]   new checkpoint served as qwen-rl-a2-final:latest
+[09:21:59] urn A2 eval of new checkpoint (4 vocabs)
+[09:28:33]   urn new-ckpt OK
+[09:28:33] R3 (script) A2 eval of new checkpoint, EFR4
+[09:28:33]   R3 new-ckpt FAILED
+[09:28:33] PHASE 4: tarball
+[09:30:33] ALL DONE — pull ~/night_artifacts.tar.gz and ~/MORNING_REPORT.md

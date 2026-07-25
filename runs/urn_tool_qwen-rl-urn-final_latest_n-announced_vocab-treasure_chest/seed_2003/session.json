@@ -1,0 +1,1012 @@
+{
+  "seed": 2003,
+  "model_key": "qwen-rl-urn-final:latest",
+  "vocab": "treasure_chest",
+  "modality": "tool",
+  "tool_choice": "required",
+  "kept": {
+    "0": 2
+  },
+  "collected": 18,
+  "budget": 3,
+  "unparsed": 38,
+  "turn_usages": [
+    {
+      "input_tokens": 600,
+      "output_tokens": 19,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 665,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 712,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 777,
+      "output_tokens": 15,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 852,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 918,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 965,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1012,
+      "output_tokens": 15,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "color_of_class": {
+    "7": "skull",
+    "6": "anchor",
+    "0": "dragon",
+    "1": "kraken",
+    "3": "phoenix",
+    "4": "serpent",
+    "2": "raven",
+    "5": "crown"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 1,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 2,
+      "prompt": "Draw 2 of 60: a skull coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 2,
+      "color": "anchor",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: an anchor coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 3,
+      "color": "dragon",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a dragon coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 4,
+      "color": "dragon",
+      "class_id": 0,
+      "class_position": 2,
+      "prompt": "Draw 5 of 60: a dragon coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "KEEP",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 5,
+      "color": "kraken",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "Draw 6 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 6,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 3,
+      "prompt": "Draw 7 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "default",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 7,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 8 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "tool",
+      "reply": "```json\n\n```",
+      "n_tool_calls": 1
+    },
+    {
+      "slot": 9,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 9: another dragon coin (already kept -> auto-collected, +1).) Draw 10 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 10,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 3,
+      "prompt": "Draw 11 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 11,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 4,
+      "prompt": "Draw 12 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 13,
+      "color": "serpent",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 13: another dragon coin (already kept -> auto-collected, +1).) Draw 14 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 14,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 5,
+      "prompt": "Draw 15 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 16,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 6,
+      "prompt": "(Since your last choice: draw 16: another dragon coin (already kept -> auto-collected, +1).) Draw 17 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 18,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 4,
+      "prompt": "(Since your last choice: draw 18: another dragon coin (already kept -> auto-collected, +1).) Draw 19 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 19,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 7,
+      "prompt": "Draw 20 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 20,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 8,
+      "prompt": "Draw 21 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 21,
+      "color": "serpent",
+      "class_id": 4,
+      "class_position": 2,
+      "prompt": "Draw 22 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 23,
+      "color": "raven",
+      "class_id": 2,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 23: another dragon coin (already kept -> auto-collected, +1).) Draw 24 of 60: a raven coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 24,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 9,
+      "prompt": "Draw 25 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 28,
+      "color": "kraken",
+      "class_id": 1,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 26: another dragon coin (already kept -> auto-collected, +1); draw 27: another dragon coin (already kept -> auto-collected, +1); draw 28: another dragon coin (already kept -> auto-collected, +1).) Draw 29 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 29,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 10,
+      "prompt": "Draw 30 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 31,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 11,
+      "prompt": "(Since your last choice: draw 31: another dragon coin (already kept -> auto-collected, +1).) Draw 32 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 32,
+      "color": "serpent",
+      "class_id": 4,
+      "class_position": 3,
+      "prompt": "Draw 33 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 33,
+      "color": "serpent",
+      "class_id": 4,
+      "class_position": 4,
+      "prompt": "Draw 34 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 34,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 12,
+      "prompt": "Draw 35 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 35,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 5,
+      "prompt": "Draw 36 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 37,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 6,
+      "prompt": "(Since your last choice: draw 37: another dragon coin (already kept -> auto-collected, +1).) Draw 38 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 38,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 13,
+      "prompt": "Draw 39 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 39,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 14,
+      "prompt": "Draw 40 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 40,
+      "color": "serpent",
+      "class_id": 4,
+      "class_position": 5,
+      "prompt": "Draw 41 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 41,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 7,
+      "prompt": "Draw 42 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 42,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 8,
+      "prompt": "Draw 43 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 43,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 9,
+      "prompt": "Draw 44 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 45,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 15,
+      "prompt": "(Since your last choice: draw 45: another dragon coin (already kept -> auto-collected, +1).) Draw 46 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 46,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 10,
+      "prompt": "Draw 47 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 47,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 16,
+      "prompt": "Draw 48 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 48,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 17,
+      "prompt": "Draw 49 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 50,
+      "color": "serpent",
+      "class_id": 4,
+      "class_position": 6,
+      "prompt": "(Since your last choice: draw 50: another dragon coin (already kept -> auto-collected, +1).) Draw 51 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 52,
+      "color": "skull",
+      "class_id": 7,
+      "class_position": 11,
+      "prompt": "(Since your last choice: draw 52: another dragon coin (already kept -> auto-collected, +1).) Draw 53 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 54,
+      "color": "crown",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 54: another dragon coin (already kept -> auto-collected, +1).) Draw 55 of 60: a crown coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 58,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 18,
+      "prompt": "(Since your last choice: draw 56: another dragon coin (already kept -> auto-collected, +1); draw 57: another dragon coin (already kept -> auto-collected, +1); draw 58: another dragon coin (already kept -> auto-collected, +1).) Draw 59 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    },
+    {
+      "slot": 59,
+      "color": "phoenix",
+      "class_id": 3,
+      "class_position": 19,
+      "prompt": "Draw 60 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide.",
+      "decision": "PASS",
+      "how": "error",
+      "reply": "[error BadRequestError, retries exhausted]",
+      "n_tool_calls": 0
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_658716d9",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_658716d9",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: a skull coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: an anchor coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_c5a3748f",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_c5a3748f",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a dragon coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "untagged_c5642056",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_c5642056",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a dragon coin appears. You have 3 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_492c0fc6",
+          "type": "function",
+          "function": {
+            "name": "keep",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_492c0fc6",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 7 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "Draw 8 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n\n```",
+      "tool_calls": [
+        {
+          "id": "untagged_025151a1",
+          "type": "function",
+          "function": {
+            "name": "pass",
+            "arguments": "\"\""
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "untagged_025151a1",
+      "content": "{\"ok\": true}"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 9: another dragon coin (already kept -> auto-collected, +1).) Draw 10 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 11 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 12 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 13: another dragon coin (already kept -> auto-collected, +1).) Draw 14 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 15 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 16: another dragon coin (already kept -> auto-collected, +1).) Draw 17 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 18: another dragon coin (already kept -> auto-collected, +1).) Draw 19 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 20 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 21 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 22 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 23: another dragon coin (already kept -> auto-collected, +1).) Draw 24 of 60: a raven coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 25 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 26: another dragon coin (already kept -> auto-collected, +1); draw 27: another dragon coin (already kept -> auto-collected, +1); draw 28: another dragon coin (already kept -> auto-collected, +1).) Draw 29 of 60: a kraken coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 30 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 31: another dragon coin (already kept -> auto-collected, +1).) Draw 32 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 33 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 34 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 35 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 36 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 37: another dragon coin (already kept -> auto-collected, +1).) Draw 38 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 39 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 40 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 41 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 42 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 43 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 44 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 45: another dragon coin (already kept -> auto-collected, +1).) Draw 46 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 47 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 48 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 49 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 50: another dragon coin (already kept -> auto-collected, +1).) Draw 51 of 60: a serpent coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 52: another dragon coin (already kept -> auto-collected, +1).) Draw 53 of 60: a skull coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 54: another dragon coin (already kept -> auto-collected, +1).) Draw 55 of 60: a crown coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 56: another dragon coin (already kept -> auto-collected, +1); draw 57: another dragon coin (already kept -> auto-collected, +1); draw 58: another dragon coin (already kept -> auto-collected, +1).) Draw 59 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    },
+    {
+      "role": "user",
+      "content": "Draw 60 of 60: a phoenix coin appears. You have 2 keep(s) left. Call the keep tool or the pass tool to decide."
+    },
+    {
+      "role": "assistant",
+      "content": "[error BadRequestError, retries exhausted]"
+    }
+  ]
+}

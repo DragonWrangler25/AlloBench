@@ -1,0 +1,368 @@
+{
+  "seed": 2016,
+  "model_key": "qwen-rl-a2-final:latest",
+  "vocab": "treasure_chest",
+  "kept": {
+    "0": 4,
+    "4": 2,
+    "7": 3
+  },
+  "collected": 34,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 26,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 447,
+      "output_tokens": 24,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 506,
+      "output_tokens": 21,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 563,
+      "output_tokens": 18,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 616,
+      "output_tokens": 20,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 671,
+      "output_tokens": 20,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 726,
+      "output_tokens": 26,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 787,
+      "output_tokens": 18,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 840,
+      "output_tokens": 19,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 895,
+      "output_tokens": 24,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 982,
+      "output_tokens": 17,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1035,
+      "output_tokens": 20,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1136,
+      "output_tokens": 24,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "0": "skull",
+    "6": "anchor",
+    "3": "dragon",
+    "5": "kraken",
+    "4": "phoenix",
+    "7": "serpent",
+    "2": "raven",
+    "1": "crown"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "skull",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, there are many more draws remaining and I need to see more coins before making a decision. \nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 1,
+      "color": "anchor",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an anchor coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, I want to see more draws and the distribution of the other crests before deciding.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 2,
+      "color": "dragon",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: a dragon coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, need more information about the other crests to make an informed decision.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 3,
+      "color": "kraken",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a kraken coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, still waiting for more draws and details on the distribution.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 4,
+      "color": "skull",
+      "class_id": 0,
+      "class_position": 2,
+      "prompt": "Draw 5 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, I'll wait to see if this crest becomes more common later.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 5,
+      "color": "skull",
+      "class_id": 0,
+      "class_position": 3,
+      "prompt": "Draw 6 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, need to observe the rest of the draws first for better insights.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 6,
+      "color": "skull",
+      "class_id": 0,
+      "class_position": 4,
+      "prompt": "Draw 7 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP, it seems this crest is appearing frequently and I can lock in all future draws for this crest.\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 7,
+      "color": "phoenix",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "Draw 8 of 60: a phoenix coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, still waiting for more information on the other crests.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 8,
+      "color": "serpent",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 9 of 60: a serpent coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, need to see the pattern for this crest and others first.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 9,
+      "color": "phoenix",
+      "class_id": 4,
+      "class_position": 2,
+      "prompt": "Draw 10 of 60: a phoenix coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP, this crest is appearing more than once so I want to lock in its future draws.\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 11,
+      "color": "kraken",
+      "class_id": 5,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 11: another skull coin (already kept -> auto-collected, +1).) Draw 12 of 60: a kraken coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, waiting for more draws to observe the distribution better.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 12,
+      "color": "serpent",
+      "class_id": 7,
+      "class_position": 2,
+      "prompt": "Draw 13 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS, need to see how common this crest is before making a decision.\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 15,
+      "color": "serpent",
+      "class_id": 7,
+      "class_position": 3,
+      "prompt": "(Since your last choice: draw 14: another skull coin (already kept -> auto-collected, +1); draw 15: another phoenix coin (already kept -> auto-collected, +1).) Draw 16 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP, this crest is starting to show up multiple times and I want all its future draws.\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, there are many more draws remaining and I need to see more coins before making a decision. \nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an anchor coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, I want to see more draws and the distribution of the other crests before deciding.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a dragon coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, need more information about the other crests to make an informed decision.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a kraken coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, still waiting for more draws and details on the distribution.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, I'll wait to see if this crest becomes more common later.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, need to observe the rest of the draws first for better insights.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 7 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP, it seems this crest is appearing frequently and I can lock in all future draws for this crest.\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 8 of 60: a phoenix coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, still waiting for more information on the other crests.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 9 of 60: a serpent coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, need to see the pattern for this crest and others first.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 10 of 60: a phoenix coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP, this crest is appearing more than once so I want to lock in its future draws.\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 11: another skull coin (already kept -> auto-collected, +1).) Draw 12 of 60: a kraken coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, waiting for more draws to observe the distribution better.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 13 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS, need to see how common this crest is before making a decision.\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 14: another skull coin (already kept -> auto-collected, +1); draw 15: another phoenix coin (already kept -> auto-collected, +1).) Draw 16 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP, this crest is starting to show up multiple times and I want all its future draws.\nDECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

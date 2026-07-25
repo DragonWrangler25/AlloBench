@@ -1,0 +1,288 @@
+{
+  "seed": 2021,
+  "model_key": "qwen-rl-a2-final:latest",
+  "vocab": "quiver",
+  "kept": {
+    "2": 2,
+    "3": 3,
+    "0": 4
+  },
+  "collected": 50,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 45,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 467,
+      "output_tokens": 33,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 535,
+      "output_tokens": 28,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 599,
+      "output_tokens": 37,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 672,
+      "output_tokens": 33,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 740,
+      "output_tokens": 31,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 807,
+      "output_tokens": 24,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 892,
+      "output_tokens": 32,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 961,
+      "output_tokens": 24,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1022,
+      "output_tokens": 35,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "3": "hawk",
+    "0": "raven",
+    "5": "owl",
+    "2": "falcon",
+    "6": "eagle",
+    "7": "kestrel"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "hawk",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nExplanation: With no additional information about the other feathers, it's too early to determine if keeping this feather will yield more arrows. I need to see more draws before making an informed decision.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 1,
+      "color": "raven",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nExplanation: Similar to the first draw, there isn't enough information to decide if this is the best feather to lock in yet.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 2,
+      "color": "owl",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nExplanation: Continuing to gather more information about the distribution of feathers before committing to any single feather is prudent.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 3,
+      "color": "falcon",
+      "class_id": 2,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a falcon arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nExplanation: I need to observe more draws to understand the frequency of each feather and decide which one is most likely to yield the highest number of arrows.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 4,
+      "color": "falcon",
+      "class_id": 2,
+      "class_position": 2,
+      "prompt": "Draw 5 of 60: a falcon arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nExplanation: Seeing two falcon arrows in the first five draws suggests that this feather might be relatively common, making it worth keeping.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 5,
+      "color": "hawk",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "Draw 6 of 60: a hawk arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nExplanation: Although I've seen two hawk arrows so far, I'm still gathering more information to determine the best strategy.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 6,
+      "color": "raven",
+      "class_id": 0,
+      "class_position": 2,
+      "prompt": "Draw 7 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nExplanation: Needing more context before deciding if this is a frequent feather or not.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 8,
+      "color": "hawk",
+      "class_id": 3,
+      "class_position": 3,
+      "prompt": "(Since your last choice: draw 8: another falcon arrow (already kept -> auto-collected, +1).) Draw 9 of 60: a hawk arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nExplanation: Having seen three hawk arrows now and knowing how the automatic collection works, it seems prudent to lock in this feather.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 9,
+      "color": "raven",
+      "class_id": 0,
+      "class_position": 3,
+      "prompt": "Draw 10 of 60: a raven arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nExplanation: I still need more information about the other feathers before making any final decisions.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 10,
+      "color": "raven",
+      "class_id": 0,
+      "class_position": 4,
+      "prompt": "Draw 11 of 60: a raven arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nExplanation: With two raven arrows now, it seems that this feather is appearing more frequently, making it a good candidate to lock in.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nExplanation: With no additional information about the other feathers, it's too early to determine if keeping this feather will yield more arrows. I need to see more draws before making an informed decision.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nExplanation: Similar to the first draw, there isn't enough information to decide if this is the best feather to lock in yet.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nExplanation: Continuing to gather more information about the distribution of feathers before committing to any single feather is prudent.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a falcon arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nExplanation: I need to observe more draws to understand the frequency of each feather and decide which one is most likely to yield the highest number of arrows.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a falcon arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nExplanation: Seeing two falcon arrows in the first five draws suggests that this feather might be relatively common, making it worth keeping.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a hawk arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nExplanation: Although I've seen two hawk arrows so far, I'm still gathering more information to determine the best strategy.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 7 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nExplanation: Needing more context before deciding if this is a frequent feather or not.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 8: another falcon arrow (already kept -> auto-collected, +1).) Draw 9 of 60: a hawk arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nExplanation: Having seen three hawk arrows now and knowing how the automatic collection works, it seems prudent to lock in this feather.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 10 of 60: a raven arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nExplanation: I still need more information about the other feathers before making any final decisions.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 11 of 60: a raven arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nExplanation: With two raven arrows now, it seems that this feather is appearing more frequently, making it a good candidate to lock in.\n\nDECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

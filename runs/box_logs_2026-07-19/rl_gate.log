@@ -1,0 +1,58 @@
+starting fresh at step 0 (0 rewards so far, next_seed=9000)
+$ sudo systemctl start ollama
+$ ollama create qwen-rl-base-ctx8k -f base_ctx.modelfile
+[?2026h[?25l[1Ggathering model components [K
+using existing layer sha256:ac9bc7a69dab38da1c790838955f1293420b55ab555ef6b4615efa1c1507b1ed [K
+using existing layer sha256:66b9ea09bd5b7099cbb4fc820f31b575c0366fa439b08245566692c6784e281e [K
+using existing layer sha256:1e65450c30670713aa47fe23e8b9662bdf4065e81cc8e3cbfaa98924fcc0d320 [K
+using existing layer sha256:832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e [K
+using existing layer sha256:ce4a164fc04605703b485251fe9f1a181688ba0eb6badb80cc6335c0de17ca0d [K
+writing manifest [K
+success [K[?25h[?2026l
+
+=== outer step 0: sampling qwen-rl-base-ctx8k:latest, seeds 9000-9024 x G=4 ===
+  resync (merge/GGUF/ollama create): 3s
+  rollout collection: 219s (100 episodes)
+$ sudo systemctl stop ollama
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/579 [00:00<?, ?it/s]Loading weights:   0%|          | 1/579 [00:00<02:01,  4.74it/s]Loading weights:   0%|          | 2/579 [00:00<01:58,  4.85it/s]/home/ubuntu/reusable-action-discovery/.venv/lib/python3.10/site-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+Loading weights:   1%|          | 5/579 [00:00<00:48, 11.79it/s]Loading weights:   3%|▎         | 18/579 [00:00<00:12, 45.49it/s]Loading weights:   6%|▋         | 37/579 [00:00<00:06, 87.34it/s]Loading weights:   9%|▉         | 52/579 [00:00<00:05, 104.65it/s]Loading weights:  11%|█         | 65/579 [00:00<00:04, 111.66it/s]Loading weights:  13%|█▎        | 78/579 [00:01<00:04, 116.78it/s]Loading weights:  17%|█▋        | 98/579 [00:01<00:03, 140.57it/s]Loading weights:  20%|█▉        | 113/579 [00:01<00:03, 134.56it/s]Loading weights:  22%|██▏       | 127/579 [00:01<00:03, 135.56it/s]Loading weights:  25%|██▌       | 146/579 [00:01<00:02, 150.39it/s]Loading weights:  28%|██▊       | 162/579 [00:01<00:03, 136.54it/s]Loading weights:  31%|███▏      | 182/579 [00:01<00:02, 152.91it/s]Loading weights:  34%|███▍      | 198/579 [00:01<00:02, 138.86it/s]Loading weights:  38%|███▊      | 218/579 [00:01<00:02, 154.13it/s]Loading weights:  40%|████      | 234/579 [00:02<00:02, 139.86it/s]Loading weights:  44%|████▍     | 254/579 [00:02<00:02, 154.72it/s]Loading weights:  47%|████▋     | 271/579 [00:02<00:02, 142.84it/s]Loading weights:  50%|█████     | 290/579 [00:02<00:01, 154.26it/s]Loading weights:  53%|█████▎    | 307/579 [00:02<00:01, 142.09it/s]Loading weights:  56%|█████▋    | 326/579 [00:02<00:01, 153.61it/s]Loading weights:  59%|█████▉    | 342/579 [00:02<00:01, 139.55it/s]Loading weights:  63%|██████▎   | 362/579 [00:02<00:01, 154.21it/s]Loading weights:  65%|██████▌   | 379/579 [00:03<00:01, 142.82it/s]Loading weights:  69%|██████▊   | 398/579 [00:03<00:01, 154.36it/s]Loading weights:  72%|███████▏  | 415/579 [00:03<00:01, 142.72it/s]Loading weights:  75%|███████▍  | 434/579 [00:03<00:00, 154.13it/s]Loading weights:  78%|███████▊  | 450/579 [00:03<00:00, 140.15it/s]Loading weights:  81%|████████  | 470/579 [00:03<00:00, 154.90it/s]Loading weights:  84%|████████▍ | 487/579 [00:03<00:00, 142.94it/s]Loading weights:  87%|████████▋ | 506/579 [00:03<00:00, 154.53it/s]Loading weights:  90%|█████████ | 523/579 [00:04<00:00, 141.58it/s]Loading weights:  93%|█████████▎| 540/579 [00:04<00:00, 147.77it/s]Loading weights:  96%|█████████▌| 556/579 [00:04<00:00, 147.88it/s]Loading weights:  99%|█████████▉| 572/579 [00:04<00:00, 141.82it/s]Loading weights: 100%|██████████| 579/579 [00:04<00:00, 131.77it/s]
+initialized fresh LoRA adapter from base (no resume checkpoint found)
+cast 915 fp32 params (norms/LoRA/biases) back to bf16 to keep SDPA on the fast path
+trainable params: 137,625,600 || all params: 14,907,659,264 || trainable%: 0.9232
+  critic fit: 500 iters, loss 0.9838 -> 0.2871
+  advantage by decision type (mean_adv, n): keep_hot=+1.87(208)  keep_trap=-2.92(92)  pass_hot_first=-1.32(124)  pass_hot_later=-2.31(99)  pass_trap=+3.67(74)
+  behavior: first_sight=69% mean_lateness=0.447 n_keeps=300
+  sequence lengths: min=138 p50=387 p95=883 max=1318
+/home/ubuntu/reusable-action-discovery/.venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:1446: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. Starting in PyTorch 2.9, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/ubuntu/reusable-action-discovery/.venv/lib/python3.10/site-packages/torch/utils/checkpoint.py:238: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+  epoch 1/1 [5/100] seqlen=431 allocated=10.51GB reserved=10.71GB
+  epoch 1/1 [10/100] seqlen=268 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [15/100] seqlen=282 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [20/100] seqlen=335 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [25/100] seqlen=360 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [30/100] seqlen=637 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [35/100] seqlen=344 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [40/100] seqlen=231 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [45/100] seqlen=269 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [50/100] seqlen=828 allocated=10.52GB reserved=10.73GB
+  epoch 1/1 [55/100] seqlen=246 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [60/100] seqlen=362 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [65/100] seqlen=244 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [70/100] seqlen=951 allocated=10.52GB reserved=10.73GB
+  epoch 1/1 [75/100] seqlen=218 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [80/100] seqlen=435 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [85/100] seqlen=661 allocated=10.51GB reserved=10.71GB
+  epoch 1/1 [90/100] seqlen=259 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 [95/100] seqlen=883 allocated=10.52GB reserved=10.71GB
+  epoch 1/1 [100/100] seqlen=407 allocated=10.51GB reserved=10.68GB
+  epoch 1/1 done: loss=-0.2541 mean_kl=0.000
+  GRPO update: 106s  mean_reward(balls)=37.75 (std=7.54 min=18.00 max=54.00)  [baselines: eager=36.60 wait2=42.64]  loss=-0.2541  mean_kl=0.000  critic_loss=0.2871 (500 iters)  mean_advantage=-0.001  mean|A|=5.51  first_sight=69%  lateness=0.447  group_std(mean=5.885 max=11.705)
+  step 0 total: 329s
+
+reward history (step 0 = first completed step): [37.75]
+behavior history (first_sight% / lateness): [(69, 0.45)]

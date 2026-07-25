@@ -1,0 +1,14 @@
+---
+pid: 80337
+cwd: "/Users/danielwang/Documents/GitHub/reusable-action-discovery"
+command: "ssh -o StrictHostKeyChecking=accept-new ubuntu@150.136.64.191 'cd ~/reusable-action-discovery && source .venv/bin/activate && rm -rf runs/rl_urn_pilot/merged && nohup env PYTHONPATH=. python -u -m scripts.creator.tool_disposition_benchmark.rl_urn_pilot --steps 20 > ~/rl_pilot_resume.log 2>&1 </dev/null & echo resumed'"
+started_at: 2026-07-08T19:46:23.496Z
+running_for_ms: 7868107  
+---
+resumed
+
+---
+exit_code: 0
+elapsed_ms: 7871951
+ended_at: 2026-07-08T21:57:35.447Z
+---

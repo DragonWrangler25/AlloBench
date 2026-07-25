@@ -1,0 +1,134 @@
+{
+  "seed": 2013,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "quiver",
+  "kept": {
+    "1": 1,
+    "2": 1,
+    "3": 1
+  },
+  "collected": 32,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 7,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 429,
+      "output_tokens": 7,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 471,
+      "output_tokens": 7,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 539,
+      "output_tokens": 7,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "1": "hawk",
+    "5": "raven",
+    "2": "owl",
+    "3": "falcon",
+    "7": "eagle",
+    "6": "kestrel",
+    "4": "heron",
+    "0": "crane"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "hawk",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 1,
+      "color": "raven",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nDECISION: PASS",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 2,
+      "color": "owl",
+      "class_id": 2,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: an owl arrow appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 4,
+      "color": "falcon",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 4: another owl arrow (already kept -> auto-collected, +1).) Draw 5 of 60: a falcon arrow appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: an owl arrow appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 4: another owl arrow (already kept -> auto-collected, +1).) Draw 5 of 60: a falcon arrow appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nDECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

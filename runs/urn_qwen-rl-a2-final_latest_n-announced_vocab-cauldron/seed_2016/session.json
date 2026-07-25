@@ -1,0 +1,316 @@
+{
+  "seed": 2016,
+  "model_key": "qwen-rl-a2-final:latest",
+  "vocab": "cauldron",
+  "kept": {
+    "0": 3,
+    "4": 2,
+    "7": 2
+  },
+  "collected": 36,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 390,
+      "output_tokens": 16,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 441,
+      "output_tokens": 15,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 491,
+      "output_tokens": 11,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 537,
+      "output_tokens": 11,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 583,
+      "output_tokens": 13,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 631,
+      "output_tokens": 17,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 709,
+      "output_tokens": 12,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 756,
+      "output_tokens": 13,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 806,
+      "output_tokens": 13,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 881,
+      "output_tokens": 14,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 931,
+      "output_tokens": 13,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "0": "frost",
+    "6": "ember",
+    "3": "venom",
+    "5": "mist",
+    "4": "thorn",
+    "7": "spark",
+    "2": "gale",
+    "1": "shade"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "frost",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS. I need to see more potions to determine the rarity and strategy.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 1,
+      "color": "ember",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an ember potion appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS. Waiting to see if any labels are overwhelmingly common or rare.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 2,
+      "color": "venom",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: a venom potion appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS. Need more information before making a decision.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 3,
+      "color": "mist",
+      "class_id": 5,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a mist potion appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS. Observing the pattern and rates first.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 4,
+      "color": "frost",
+      "class_id": 0,
+      "class_position": 2,
+      "prompt": "Draw 5 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS. Want to see more of this label before deciding.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 5,
+      "color": "frost",
+      "class_id": 0,
+      "class_position": 3,
+      "prompt": "Draw 6 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP. Frost seems to be a recurring label, so I'll take it.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 7,
+      "color": "thorn",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 7: another frost potion (already kept -> auto-collected, +1).) Draw 8 of 60: a thorn potion appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS. Need to assess the other labels before deciding.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 8,
+      "color": "spark",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 9 of 60: a spark potion appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS. Waiting to see more about this label's frequency.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 9,
+      "color": "thorn",
+      "class_id": 4,
+      "class_position": 2,
+      "prompt": "Draw 10 of 60: a thorn potion appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP. Thorn seems to be appearing, better take it.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 11,
+      "color": "mist",
+      "class_id": 5,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 11: another frost potion (already kept -> auto-collected, +1).) Draw 12 of 60: a mist potion appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "lead",
+      "reply": "PASS. Need to see more before deciding on the last slot.",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 12,
+      "color": "spark",
+      "class_id": 7,
+      "class_position": 2,
+      "prompt": "Draw 13 of 60: a spark potion appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "lead",
+      "reply": "KEEP. Spark is showing up, taking it for now.",
+      "response_model": "qwen-rl-a2-final:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS. I need to see more potions to determine the rarity and strategy."
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an ember potion appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS. Waiting to see if any labels are overwhelmingly common or rare."
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a venom potion appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS. Need more information before making a decision."
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a mist potion appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS. Observing the pattern and rates first."
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS. Want to see more of this label before deciding."
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP. Frost seems to be a recurring label, so I'll take it."
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 7: another frost potion (already kept -> auto-collected, +1).) Draw 8 of 60: a thorn potion appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS. Need to assess the other labels before deciding."
+    },
+    {
+      "role": "user",
+      "content": "Draw 9 of 60: a spark potion appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS. Waiting to see more about this label's frequency."
+    },
+    {
+      "role": "user",
+      "content": "Draw 10 of 60: a thorn potion appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP. Thorn seems to be appearing, better take it."
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 11: another frost potion (already kept -> auto-collected, +1).) Draw 12 of 60: a mist potion appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS. Need to see more before deciding on the last slot."
+    },
+    {
+      "role": "user",
+      "content": "Draw 13 of 60: a spark potion appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP. Spark is showing up, taking it for now."
+    }
+  ],
+  "termination": "budget_exhausted"
+}

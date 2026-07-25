@@ -1,0 +1,108 @@
+{
+  "seed": 2007,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "treasure_chest",
+  "kept": {
+    "2": 1,
+    "0": 1,
+    "4": 1
+  },
+  "collected": 35,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 49,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 470,
+      "output_tokens": 40,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 570,
+      "output_tokens": 44,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "2": "skull",
+    "0": "anchor",
+    "4": "dragon",
+    "1": "kraken",
+    "3": "phoenix",
+    "5": "serpent",
+    "7": "raven",
+    "6": "crown"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "skull",
+      "class_id": 2,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "Think: This is the first draw, and there are no prior coins to compare it with. However, since I want to ensure I have a variety of crests and maximize my chances, I will keep this one.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 1,
+      "color": "anchor",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an anchor coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "Think: Keeping the anchor coin would be beneficial if more anchors appear later and I want to maximize that crest's value. Since it's early, keeping this one seems prudent.\n\nDECISION:KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 3,
+      "color": "dragon",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 3: another skull coin (already kept -> auto-collected, +1).) Draw 4 of 60: a dragon coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "Think: I already have one skull coin and keeping the dragon crest could be beneficial if more dragons appear later. Given that I only have one keep left, I should prioritize the most promising crest.\n\nDECISION:KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "Think: This is the first draw, and there are no prior coins to compare it with. However, since I want to ensure I have a variety of crests and maximize my chances, I will keep this one.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an anchor coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "Think: Keeping the anchor coin would be beneficial if more anchors appear later and I want to maximize that crest's value. Since it's early, keeping this one seems prudent.\n\nDECISION:KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 3: another skull coin (already kept -> auto-collected, +1).) Draw 4 of 60: a dragon coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "Think: I already have one skull coin and keeping the dragon crest could be beneficial if more dragons appear later. Given that I only have one keep left, I should prioritize the most promising crest.\n\nDECISION:KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

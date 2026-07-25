@@ -1,0 +1,160 @@
+{
+  "seed": 2022,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "treasure_chest",
+  "kept": {
+    "1": 1,
+    "4": 1,
+    "3": 2
+  },
+  "collected": 44,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 25,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 446,
+      "output_tokens": 41,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 522,
+      "output_tokens": 31,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 589,
+      "output_tokens": 29,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 679,
+      "output_tokens": 24,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "1": "skull",
+    "0": "anchor",
+    "4": "dragon",
+    "3": "kraken",
+    "7": "phoenix",
+    "6": "serpent",
+    "5": "raven",
+    "2": "crown"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "skull",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "It's the first draw, and we don't know anything about the distribution of the other coins. DECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 1,
+      "color": "anchor",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an anchor coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "Given that it's not necessarily clear if this is one of the common crests, we should be cautious but also consider that keeping it could lock in future coins of this crest. DECISION: PASS",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 2,
+      "color": "dragon",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: a dragon coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "It seems like we might be into the middle range of draws, and keeping another crest could yield good results if it's common. DECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 3,
+      "color": "kraken",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a kraken coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "With only one keep left, we should be more selective. Let's wait to see if this crest is abundant later. DECISION: PASS",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 5,
+      "color": "kraken",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 5: another dragon coin (already kept -> auto-collected, +1).) Draw 6 of 60: a kraken coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "The kraken crest has appeared again, so keeping it now would lock in its future occurrences. DECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "It's the first draw, and we don't know anything about the distribution of the other coins. DECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an anchor coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "Given that it's not necessarily clear if this is one of the common crests, we should be cautious but also consider that keeping it could lock in future coins of this crest. DECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a dragon coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "It seems like we might be into the middle range of draws, and keeping another crest could yield good results if it's common. DECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a kraken coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "With only one keep left, we should be more selective. Let's wait to see if this crest is abundant later. DECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 5: another dragon coin (already kept -> auto-collected, +1).) Draw 6 of 60: a kraken coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "The kraken crest has appeared again, so keeping it now would lock in its future occurrences. DECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

@@ -1,0 +1,263 @@
+{
+  "seed": 2000,
+  "model_key": "qwen-rl-a2-final:latest",
+  "vocab": "treasure_chest",
+  "kept": {
+    "4": 2,
+    "6": 2,
+    "3": 2
+  },
+  "collected": 50,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 48,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 469,
+      "output_tokens": 40,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 544,
+      "output_tokens": 30,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 609,
+      "output_tokens": 31,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 676,
+      "output_tokens": 40,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 751,
+      "output_tokens": 31,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 879,
+      "output_tokens": 45,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1005,
+      "output_tokens": 32,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 1099,
+      "output_tokens": 33,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "6": "skull",
+    "0": "anchor",
+    "4": "dragon",
+    "7": "kraken",
+    "1": "phoenix",
+    "3": "serpent",
+    "5": "raven"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "skull",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nAfter only the first draw, it's too early to determine if this skull coin is rare or common. I need more information about the other crests and their frequency before deciding whether to keep this one.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 1,
+      "color": "anchor",
+      "class_id": 0,
+      "class_position": 1,
+      "prompt": "Draw 2 of 60: an anchor coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nWith only two draws, there's still not enough information to decide if the skull or anchor is more valuable. I need to see more coins before making a decision.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 2,
+      "color": "dragon",
+      "class_id": 4,
+      "class_position": 1,
+      "prompt": "Draw 3 of 60: a dragon coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nI need to observe more draws to understand the distribution and frequency of each crest before deciding which ones are worth keeping.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 3,
+      "color": "dragon",
+      "class_id": 4,
+      "class_position": 2,
+      "prompt": "Draw 4 of 60: a dragon coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nSeeing two dragons in a row suggests that dragons might be more common. Keeping one now will automatically collect all future dragons.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 4,
+      "color": "kraken",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "Draw 5 of 60: a kraken coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nWith only one dragon kept, I need to see more draws to determine if the kraken is worth keeping or if there are other valuable crests that might appear.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 5,
+      "color": "skull",
+      "class_id": 6,
+      "class_position": 2,
+      "prompt": "Draw 6 of 60: a skull coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nSeeing two skulls in a row suggests that skulls might be somewhat common, but keeping one now will secure all future skulls.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 9,
+      "color": "phoenix",
+      "class_id": 1,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 7: another skull coin (already kept -> auto-collected, +1); draw 8: another dragon coin (already kept -> auto-collected, +1); draw 9: another dragon coin (already kept -> auto-collected, +1).) Draw 10 of 60: a phoenix coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nWith two already kept crests (skulls and dragons), I need to see more draws to determine if the phoenix is worth keeping or if there are other valuable crests that might appear.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 12,
+      "color": "serpent",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 11: another skull coin (already kept -> auto-collected, +1); draw 12: another skull coin (already kept -> auto-collected, +1).) Draw 13 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "PASS",
+      "how": "tag",
+      "reply": "PASS\n\nGiven that skulls are now known to be common, I need more information about the serpent before deciding whether it's worth keeping.\n\nDECISION: PASS",
+      "response_model": "qwen-rl-a2-final:latest"
+    },
+    {
+      "slot": 14,
+      "color": "serpent",
+      "class_id": 3,
+      "class_position": 2,
+      "prompt": "(Since your last choice: draw 14: another skull coin (already kept -> auto-collected, +1).) Draw 15 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "KEEP\n\nSeeing three skulls in a row suggests that skulls are indeed quite common. Keeping one serpent now will secure all future serpents.\n\nDECISION: KEEP",
+      "response_model": "qwen-rl-a2-final:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nAfter only the first draw, it's too early to determine if this skull coin is rare or common. I need more information about the other crests and their frequency before deciding whether to keep this one.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 2 of 60: an anchor coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nWith only two draws, there's still not enough information to decide if the skull or anchor is more valuable. I need to see more coins before making a decision.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 3 of 60: a dragon coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nI need to observe more draws to understand the distribution and frequency of each crest before deciding which ones are worth keeping.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a dragon coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nSeeing two dragons in a row suggests that dragons might be more common. Keeping one now will automatically collect all future dragons.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 5 of 60: a kraken coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nWith only one dragon kept, I need to see more draws to determine if the kraken is worth keeping or if there are other valuable crests that might appear.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "Draw 6 of 60: a skull coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nSeeing two skulls in a row suggests that skulls might be somewhat common, but keeping one now will secure all future skulls.\n\nDECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 7: another skull coin (already kept -> auto-collected, +1); draw 8: another dragon coin (already kept -> auto-collected, +1); draw 9: another dragon coin (already kept -> auto-collected, +1).) Draw 10 of 60: a phoenix coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nWith two already kept crests (skulls and dragons), I need to see more draws to determine if the phoenix is worth keeping or if there are other valuable crests that might appear.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 11: another skull coin (already kept -> auto-collected, +1); draw 12: another skull coin (already kept -> auto-collected, +1).) Draw 13 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "PASS\n\nGiven that skulls are now known to be common, I need more information about the serpent before deciding whether it's worth keeping.\n\nDECISION: PASS"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 14: another skull coin (already kept -> auto-collected, +1).) Draw 15 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "KEEP\n\nSeeing three skulls in a row suggests that skulls are indeed quite common. Keeping one serpent now will secure all future serpents.\n\nDECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

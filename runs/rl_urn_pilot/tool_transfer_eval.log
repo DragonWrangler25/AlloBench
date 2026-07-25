@@ -1,0 +1,80 @@
+##### qwen-rl-base-ctx8k:latest #####
+A1 announce arm: qwen-rl-base-ctx8k:latest, uniform-hard N=8, MAG=100, pinned_trap=None, g=1.0, 12 seeds (cap=$1000000000.0) ...
+    [seed 2001] turn   5  problem  3/60  11k tok  62s
+    [seed 2002] turn  25  problem 10/60  73k tok  64s
+  [seed 2000]    ran  $0.000  cumulative=$0.00
+    [seed 2001] turn  11  problem  5/60  33k tok  136s
+    [seed 2003] turn  21  problem  7/60  60k tok  138s
+  [seed 2001]    ran  $0.000  cumulative=$0.00
+    [seed 2004] turn   6  problem  2/60  9k tok  63s
+  [seed 2002]    ran  $0.000  cumulative=$0.00
+    [seed 2003] turn  38  problem 15/60  164k tok  218s
+    [seed 2005] turn   4  problem  2/60  6k tok  69s
+  [seed 2003]    ran  $0.000  cumulative=$0.00
+    [seed 2005] turn   6  problem  2/60  11k tok  157s
+  [seed 2004]    ran  $0.000  cumulative=$0.00
+    [seed 2007] turn   3  problem  1/60  4k tok  77s
+  [seed 2006]    ran  $0.000  cumulative=$0.00
+    [seed 2008] turn   6  problem  2/60  10k tok  66s
+    [seed 2005] turn  11  problem  3/60  25k tok  291s
+    [seed 2009] turn  11  problem  4/60  23k tok  61s
+  [seed 2009]    ran  $0.000  cumulative=$0.00
+  [seed 2008]    ran  $0.000  cumulative=$0.00
+    [seed 2010] turn   2  problem  2/60  3k tok  73s
+    [seed 2005] turn  15  problem  4/60  43k tok  386s
+  [seed 2005]    ran  $0.000  cumulative=$0.00
+  [seed 2007]    ran  $0.000  cumulative=$0.00
+    [seed 2010] turn   5  problem  3/60  10k tok  138s
+    [seed 2011] turn   5  problem  2/60  8k tok  81s
+  [seed 2011]    ran  $0.000  cumulative=$0.00
+  [seed 2010]    ran  $0.000  cumulative=$0.00
+
+==== COMPLETED: A1 spend $0.00 ====
+
+==== A1 FIDELITY (n=12 seeds, 23 builds) ====
+  builds at FIRST SIGHT (lateness 0): 23/23 = 100%
+  mean lateness = 0.000  max = 0
+  built-set == first-B-distinct-arrivals: 10/12 = 83%
+  builds/seed = 1.92
+
+  => lateness ~0 CONFIRMS open-loop under disclosure; lateness>0 would mean it closes the loop when told.
+
+==== A1 TOOL vs exact pi* (a_script=1.0, n=12 seeds) ====
+  regret mean=3377 +/- 717  pos=9/12  model_traps/seed=0.83  pi*_traps/seed=0.75
+  (extrapolated analytically past any early-stop truncation -- value_of_builds prices the untouched tail of the T=60 stream from the model's actual build set, no re-run needed)
+##### qwen-rl-urn-final:latest #####
+A1 announce arm: qwen-rl-urn-final:latest, uniform-hard N=8, MAG=100, pinned_trap=None, g=1.0, 12 seeds (cap=$1000000000.0) ...
+  [seed 2002]    ran  $0.000  cumulative=$0.00
+    [seed 2001] turn   5  problem  2/60  11k tok  68s
+    [seed 2000] turn  13  problem  3/60  27k tok  80s
+  [seed 2000]    ran  $0.000  cumulative=$0.00
+  [seed 2003]    ran  $0.000  cumulative=$0.00
+  [seed 2001]    ran  $0.000  cumulative=$0.00
+    [seed 2004] turn  45  problem 20/60  168k tok  124s
+    [seed 2006] turn  11  problem  3/60  20k tok  81s
+  [seed 2006]    ran  $0.000  cumulative=$0.00
+  [seed 2004]    ran  $0.000  cumulative=$0.00
+    [seed 2008] turn   4  problem  1/60  6k tok  67s
+  [seed 2005]    ran  $0.000  cumulative=$0.00
+  [seed 2007]    ran  $0.000  cumulative=$0.00
+    [seed 2009] turn   7  problem  3/60  12k tok  62s
+    [seed 2011] turn  12  problem  3/60  23k tok  65s
+  [seed 2010]    ran  $0.000  cumulative=$0.00
+    [seed 2008] turn  22  problem  9/60  70k tok  240s
+  [seed 2009]    ran  $0.000  cumulative=$0.00
+  [seed 2011]    ran  $0.000  cumulative=$0.00
+  [seed 2008]    ran  $0.000  cumulative=$0.00
+
+==== COMPLETED: A1 spend $0.00 ====
+
+==== A1 FIDELITY (n=12 seeds, 21 builds) ====
+  builds at FIRST SIGHT (lateness 0): 20/21 = 95%
+  mean lateness = 0.238  max = 5
+  built-set == first-B-distinct-arrivals: 9/12 = 75%
+  builds/seed = 1.75
+
+  => lateness ~0 CONFIRMS open-loop under disclosure; lateness>0 would mean it closes the loop when told.
+
+==== A1 TOOL vs exact pi* (a_script=1.0, n=12 seeds) ====
+  regret mean=3729 +/- 534  pos=11/12  model_traps/seed=0.83  pi*_traps/seed=0.75
+  (extrapolated analytically past any early-stop truncation -- value_of_builds prices the untouched tail of the T=60 stream from the model's actual build set, no re-run needed)

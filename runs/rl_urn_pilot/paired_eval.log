@@ -1,0 +1,110 @@
+##### qwen2.5-coder:14b #####
+URN abstraction-gap control: qwen2.5-coder:14b, uniform N=8, g=1.0, 24 seeds (clear labels, cap=$12.0) ...
+  [seed 2000] cached  $0.000  cumulative=$0.00
+  [seed 2008]    ran  $0.000  cumulative=$0.00
+  [seed 2004]    ran  $0.000  cumulative=$0.00
+  [seed 2001]    ran  $0.000  cumulative=$0.00
+  [seed 2010]    ran  $0.000  cumulative=$0.00
+  [seed 2003]    ran  $0.000  cumulative=$0.00
+  [seed 2005]    ran  $0.000  cumulative=$0.00
+  [seed 2013]    ran  $0.000  cumulative=$0.00
+  [seed 2009]    ran  $0.000  cumulative=$0.00
+  [seed 2012]    ran  $0.000  cumulative=$0.00
+  [seed 2002]    ran  $0.000  cumulative=$0.00
+  [seed 2018]    ran  $0.000  cumulative=$0.00
+  [seed 2014]    ran  $0.000  cumulative=$0.00
+  [seed 2020]    ran  $0.000  cumulative=$0.00
+  [seed 2007]    ran  $0.000  cumulative=$0.00
+  [seed 2015]    ran  $0.000  cumulative=$0.00
+  [seed 2011]    ran  $0.000  cumulative=$0.00
+  [seed 2006]    ran  $0.000  cumulative=$0.00
+  [seed 2019]    ran  $0.000  cumulative=$0.00
+  [seed 2022]    ran  $0.000  cumulative=$0.00
+  [seed 2023]    ran  $0.000  cumulative=$0.00
+  [seed 2017]    ran  $0.000  cumulative=$0.00
+  [seed 2016]    ran  $0.000  cumulative=$0.00
+  [seed 2021]    ran  $0.000  cumulative=$0.00
+
+==== COMPLETED: urn spend $0.00 ====
+
+==== URN FIDELITY (n=24 seeds, 72 keeps) ====
+  keeps at FIRST SIGHT (lateness 0): 54/72 = 75%
+  mean keep lateness = 0.375  max = 4
+  kept-set == first-B-distinct: 13/24 = 54%
+  keeps/seed = 3.00   unparsed decisions = 0
+
+==== URN vs exact pi* (same DP as tool task) ====
+  regret mean=938 +/- 283  pos=14/24  model_traps/seed=1.04  pi*_traps/seed=0.67
+
+==== URN BALLS COLLECTED (urn's own objective; balls-regret = utility regret / 178.7) ====
+  balls/seed: model=33.7  pi*=39.0  clairvoyant(hindsight)=49.7
+  balls-regret vs pi* = 5.2 +/- 1.6 /seed  (model collects 87% of pi*'s)
+
+  (no paired tool baseline for qwen2.5-coder:14b: A1 announce was Haiku-only. Compare urn behavior across models on the same seeds instead.)
+
+==== TRANSCRIPT echo (seed 2000, kept={'6': 1, '0': 1, '4': 2}) ====
+  [slot  0] PROMPT: Draw 1 of 60: a red ball appears. You have 3 keep(s) left. KEEP or PASS?
+            -> KEEP | This question cannot be definitively answered without additional context regarding the strategy and decision-making process that will be employed for subsequent
+  [slot  1] PROMPT: Draw 2 of 60: a blue ball appears. You have 2 keep(s) left. KEEP or PASS?
+            -> KEEP | DECISION: KEEP
+  [slot  2] PROMPT: Draw 3 of 60: a green ball appears. You have 1 keep(s) left. KEEP or PASS?
+            -> PASS | Let's proceed cautiously since we have seen only three colors so far and don't know the distribution.   **DECISION: PASS**
+  [slot  3] PROMPT: Draw 4 of 60: a green ball appears. You have 1 keep(s) left. KEEP or PASS?
+            -> KEEP | Since I passed on the previous green ball, I'll keep this one.   **DECISION: KEEP**
+##### qwen-rl-urn-final:latest #####
+URN abstraction-gap control: qwen-rl-urn-final:latest, uniform N=8, g=1.0, 24 seeds (clear labels, cap=$12.0) ...
+  [seed 2000]    ran  $0.000  cumulative=$0.00
+  [seed 2002]    ran  $0.000  cumulative=$0.00
+  [seed 2006]    ran  $0.000  cumulative=$0.00
+  [seed 2007]    ran  $0.000  cumulative=$0.00
+  [seed 2005]    ran  $0.000  cumulative=$0.00
+  [seed 2009]    ran  $0.000  cumulative=$0.00
+  [seed 2010]    ran  $0.000  cumulative=$0.00
+  [seed 2011]    ran  $0.000  cumulative=$0.00
+  [seed 2015]    ran  $0.000  cumulative=$0.00
+  [seed 2013]    ran  $0.000  cumulative=$0.00
+  [seed 2003]    ran  $0.000  cumulative=$0.00
+  [seed 2004]    ran  $0.000  cumulative=$0.00
+  [seed 2016]    ran  $0.000  cumulative=$0.00
+  [seed 2018]    ran  $0.000  cumulative=$0.00
+  [seed 2019]    ran  $0.000  cumulative=$0.00
+  [seed 2017]    ran  $0.000  cumulative=$0.00
+  [seed 2020]    ran  $0.000  cumulative=$0.00
+  [seed 2022]    ran  $0.000  cumulative=$0.00
+  [seed 2023]    ran  $0.000  cumulative=$0.00
+  [seed 2012]    ran  $0.000  cumulative=$0.00
+  [seed 2001]    ran  $0.000  cumulative=$0.00
+  [seed 2008]    ran  $0.000  cumulative=$0.00
+  [seed 2021]    ran  $0.000  cumulative=$0.00
+  [seed 2014]    ran  $0.000  cumulative=$0.00
+
+==== COMPLETED: urn spend $0.00 ====
+
+==== URN FIDELITY (n=24 seeds, 72 keeps) ====
+  keeps at FIRST SIGHT (lateness 0): 23/72 = 32%
+  mean keep lateness = 0.903  max = 5
+  kept-set == first-B-distinct: 3/24 = 12%
+  keeps/seed = 3.00   unparsed decisions = 1
+
+==== URN vs exact pi* (same DP as tool task) ====
+  regret mean=-67 +/- 376  pos=11/24  model_traps/seed=0.58  pi*_traps/seed=0.67
+
+==== URN BALLS COLLECTED (urn's own objective; balls-regret = utility regret / 178.7) ====
+  balls/seed: model=39.3  pi*=39.0  clairvoyant(hindsight)=49.7
+  balls-regret vs pi* = -0.4 +/- 2.1 /seed  (model collects 101% of pi*'s)
+
+  (no paired tool baseline for qwen-rl-urn-final:latest: A1 announce was Haiku-only. Compare urn behavior across models on the same seeds instead.)
+
+==== TRANSCRIPT echo (seed 2000, kept={'0': 1, '4': 2, '6': 2}) ====
+  [slot  0] PROMPT: Draw 1 of 60: a red ball appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  1] PROMPT: Draw 2 of 60: a blue ball appears. You have 3 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  2] PROMPT: Draw 3 of 60: a green ball appears. You have 2 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  3] PROMPT: Draw 4 of 60: a green ball appears. You have 2 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  4] PROMPT: Draw 5 of 60: a yellow ball appears. You have 1 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  5] PROMPT: Draw 6 of 60: a red ball appears. You have 1 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP

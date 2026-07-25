@@ -1,0 +1,250 @@
+A1 announce arm: qwen-rl-a2-final:latest, uniform-hard N=8, MAG=100, pinned_trap=None, g=1.0, 24 seeds (cap=$1000000000.0) ...
+    [seed 2002] turn   1  problem  1/60  actions=run_script  writes_left=3  1.3k tok  8s
+    [seed 2003] turn   1  problem  1/60  actions=write_script  writes_left=2  1.3k tok  10s
+    [seed 2002] turn   2  problem  1/60  actions=write_script  writes_left=2  2.6k tok  11s
+    [seed 2003] turn   2  problem  1/60  actions=run_script  writes_left=2  2.8k tok  13s
+    [seed 2003] turn   3  problem  1/60  actions=run_script  writes_left=2  4.4k tok  15s
+    [seed 2000] turn   2  problem  1/60  actions=write_script  writes_left=2  2.9k tok  17s
+    [seed 2000] turn   3  problem  1/60  actions=read_script  writes_left=2  4.3k tok  19s
+    [seed 2003] turn   4  problem  1/60  actions=run_script  writes_left=2  6.0k tok  18s
+    [seed 2000] turn   5  problem  1/60  actions=run_script  writes_left=2  7.6k tok  22s
+    [seed 2002] turn   4  problem  1/60  actions=run_script  writes_left=2  5.8k tok  22s
+    [seed 2003] turn   5  problem  1/60  actions=write_script  writes_left=1  7.8k tok  22s
+    [seed 2000] turn   6  problem  1/60  actions=run_script  writes_left=2  9.4k tok  24s
+    [seed 2003] turn   6  problem  1/60  actions=run_script  writes_left=1  9.6k tok  25s
+    [seed 2003] turn   8  problem  1/60  actions=run_script  writes_left=1  13.4k tok  29s
+    [seed 2000] turn  11  problem  2/60  actions=write_script  writes_left=1  18.6k tok  30s
+    [seed 2001] turn   2  problem  1/60  actions=write_script  writes_left=2  3.3k tok  29s
+    [seed 2003] turn   9  problem  1/60  actions=run_script  writes_left=1  15.4k tok  32s
+    [seed 2001] turn   3  problem  1/60  actions=run_script  writes_left=2  4.9k tok  33s
+    [seed 2002] turn   7  problem  1/60  actions=run_script  writes_left=2  11.5k tok  33s
+    [seed 2000] turn  15  problem  2/60  actions=run_script  writes_left=1  26.8k tok  36s
+    [seed 2001] turn   4  problem  2/60  actions=submit_answer  writes_left=2  6.6k tok  35s
+    [seed 2003] turn  12  problem  1/60  actions=run_script  writes_left=1  21.6k tok  36s
+    [seed 2000] turn  16  problem  3/60  actions=submit_answer  writes_left=1  29.0k tok  38s
+    [seed 2002] turn   8  problem  1/60  actions=run_script  writes_left=2  13.5k tok  37s
+    [seed 2001] turn   5  problem  2/60  actions=write_script  writes_left=1  8.5k tok  40s
+    [seed 2003] turn  13  problem  1/60  actions=write_script  writes_left=0  23.8k tok  40s
+  [seed 2003]    ran  $0.000  cumulative=$0.00
+    [seed 2001] turn   6  problem  2/60  actions=run_script  writes_left=1  10.6k tok  42s
+    [seed 2001] turn   7  problem  3/60  actions=submit_answer  writes_left=1  12.8k tok  43s
+    [seed 2000] turn  21  problem  4/60  actions=write_script  writes_left=0  41.3k tok  44s
+  [seed 2000]    ran  $0.000  cumulative=$0.00
+    [seed 2002] turn  10  problem  1/60  actions=read_script  writes_left=2  17.6k tok  44s
+    [seed 2004] turn   1  problem  1/60  actions=write_script  writes_left=3  1.4k tok  6s
+    [seed 2005] turn   1  problem  1/60  actions=write_script  writes_left=2  1.4k tok  3s
+    [seed 2001] turn   8  problem  3/60  actions=write_script  writes_left=0  15.3k tok  47s
+  [seed 2001]    ran  $0.000  cumulative=$0.00
+    [seed 2005] turn   2  problem  1/60  actions=run_script  writes_left=2  2.8k tok  5s
+    [seed 2004] turn   2  problem  1/60  actions=write_script  writes_left=2  2.8k tok  9s
+    [seed 2006] turn   1  problem  1/60  actions=write_script  writes_left=2  1.3k tok  3s
+    [seed 2006] turn   2  problem  1/60  actions=run_script  writes_left=2  2.7k tok  4s
+    [seed 2004] turn   3  problem  1/60  actions=run_script  writes_left=2  4.3k tok  11s
+    [seed 2004] turn   4  problem  2/60  actions=submit_answer  writes_left=2  5.9k tok  13s
+    [seed 2002] turn  11  problem  1/60  actions=write_script  writes_left=1  20.2k tok  55s
+    [seed 2006] turn   3  problem  1/60  actions=run_script  writes_left=2  4.3k tok  8s
+    [seed 2006] turn   4  problem  2/60  actions=submit_answer  writes_left=2  5.9k tok  10s
+    [seed 2004] turn   6  problem  2/60  actions=write_script  writes_left=1  9.6k tok  17s
+    [seed 2002] turn  12  problem  1/60  actions=run_script  writes_left=1  22.9k tok  58s
+    [seed 2004] turn   9  problem  2/60  actions=run_script  writes_left=1  15.4k tok  19s
+    [seed 2002] turn  13  problem  2/60  actions=submit_answer  writes_left=1  25.7k tok  60s
+    [seed 2006] turn   5  problem  2/60  actions=write_script  writes_left=1  7.7k tok  14s
+    [seed 2005] turn   4  problem  1/60  actions=run_script  writes_left=2  6.1k tok  19s
+    [seed 2004] turn  10  problem  2/60  actions=run_script  writes_left=1  17.6k tok  24s
+    [seed 2005] turn   5  problem  2/60  actions=submit_answer  writes_left=2  7.7k tok  21s
+    [seed 2005] turn   6  problem  2/60  actions=run_script  writes_left=2  9.5k tok  23s
+    [seed 2006] turn   9  problem  2/60  actions=run_script  writes_left=1  15.6k tok  19s
+    [seed 2002] turn  16  problem  2/60  actions=write_script  writes_left=0  34.6k tok  67s
+  [seed 2002]    ran  $0.000  cumulative=$0.00
+    [seed 2004] turn  13  problem  3/60  actions=submit_answer  writes_left=1  24.1k tok  27s
+    [seed 2005] turn   7  problem  2/60  actions=run_script  writes_left=2  11.4k tok  26s
+    [seed 2007] turn   1  problem  1/60  actions=run_script  writes_left=3  1.2k tok  2s
+    [seed 2006] turn  11  problem  2/60  actions=run_script  writes_left=1  19.7k tok  23s
+    [seed 2006] turn  14  problem  2/60  actions=run_script  writes_left=1  26.4k tok  26s
+    [seed 2004] turn  15  problem  3/60  actions=run_script  writes_left=1  29.2k tok  33s
+    [seed 2007] turn   2  problem  1/60  actions=write_script  writes_left=2  2.6k tok  8s
+    [seed 2005] turn  11  problem  2/60  actions=run_script  writes_left=2  19.5k tok  32s
+    [seed 2007] turn   3  problem  1/60  actions=run_script  writes_left=2  4.0k tok  11s
+    [seed 2004] turn  18  problem  3/60  actions=run_script  writes_left=1  37.2k tok  40s
+    [seed 2007] turn   5  problem  2/60  actions=submit_answer  writes_left=2  7.0k tok  14s
+    [seed 2005] turn  20  problem  5/60  actions=submit_answer  writes_left=2  40.0k tok  43s
+    [seed 2006] turn  21  problem  3/60  actions=run_script  writes_left=1  43.5k tok  42s
+    [seed 2004] turn  23  problem  4/60  actions=run_script  writes_left=1  51.3k tok  51s
+    [seed 2006] turn  25  problem  4/60  actions=submit_answer  writes_left=1  54.1k tok  48s
+    [seed 2004] turn  29  problem  5/60  actions=write_script  writes_left=0  69.9k tok  58s
+  [seed 2004]    ran  $0.000  cumulative=$0.00
+    [seed 2007] turn  11  problem  3/60  actions=run_script  writes_left=2  18.3k tok  34s
+    [seed 2008] turn   1  problem  1/60  actions=write_script  writes_left=2  1.5k tok  7s
+    [seed 2007] turn  13  problem  3/60  actions=write_script  writes_left=1  23.1k tok  41s
+    [seed 2008] turn   2  problem  1/60  actions=run_script  writes_left=2  3.0k tok  11s
+    [seed 2007] turn  14  problem  3/60  actions=run_script  writes_left=1  25.8k tok  46s
+    [seed 2006] turn  43  problem  8/60  actions=write_script  writes_left=0  113.2k tok  68s
+  [seed 2006]    ran  $0.000  cumulative=$0.00
+    [seed 2005] turn  25  problem  6/60  actions=write_script  writes_left=1  54.6k tok  72s
+    [seed 2008] turn   3  problem  1/60  actions=write_script  writes_left=1  4.8k tok  17s
+    [seed 2008] turn   4  problem  1/60  actions=run_script  writes_left=1  6.7k tok  22s
+    [seed 2005] turn  27  problem  6/60  actions=run_script  writes_left=1  61.7k tok  78s
+    [seed 2007] turn  15  problem  3/60  actions=write_script  writes_left=0  28.7k tok  55s
+  [seed 2007]    ran  $0.000  cumulative=$0.00
+    [seed 2008] turn   5  problem  2/60  actions=submit_answer  writes_left=1  8.6k tok  24s
+    [seed 2010] turn   1  problem  1/60  actions=write_script  writes_left=2  1.4k tok  6s
+    [seed 2009] turn   2  problem  1/60  actions=write_script  writes_left=2  2.9k tok  14s
+    [seed 2010] turn   2  problem  1/60  actions=run_script  writes_left=2  2.8k tok  8s
+    [seed 2010] turn   3  problem  2/60  actions=submit_answer  writes_left=2  4.3k tok  9s
+    [seed 2009] turn   3  problem  1/60  actions=run_script  writes_left=2  4.6k tok  17s
+    [seed 2008] turn   6  problem  2/60  actions=write_script  writes_left=0  11.2k tok  34s
+  [seed 2008]    ran  $0.000  cumulative=$0.00
+    [seed 2009] turn   4  problem  2/60  actions=submit_answer  writes_left=2  6.3k tok  18s
+    [seed 2010] turn   4  problem  2/60  actions=write_script  writes_left=1  6.2k tok  13s
+    [seed 2009] turn   7  problem  2/60  actions=run_script  writes_left=2  12.3k tok  22s
+    [seed 2005] turn  28  problem  7/60  actions=submit_answer  writes_left=1  65.9k tok  94s
+    [seed 2010] turn   5  problem  2/60  actions=run_script  writes_left=1  8.1k tok  16s
+    [seed 2011] turn   1  problem  1/60  actions=write_script  writes_left=2  1.4k tok  9s
+    [seed 2010] turn   7  problem  3/60  actions=submit_answer  writes_left=1  12.3k tok  19s
+    [seed 2009] turn  13  problem  3/60  actions=write_script  writes_left=1  25.6k tok  30s
+    [seed 2011] turn   2  problem  1/60  actions=run_script  writes_left=2  2.9k tok  13s
+    [seed 2010] turn   8  problem  3/60  actions=write_script  writes_left=0  14.7k tok  23s
+  [seed 2010]    ran  $0.000  cumulative=$0.00
+    [seed 2011] turn   3  problem  2/60  actions=submit_answer  writes_left=2  4.4k tok  15s
+    [seed 2012] turn   1  problem  1/60  actions=write_script  writes_left=2  1.3k tok  5s
+    [seed 2011] turn   4  problem  2/60  actions=run_script  writes_left=2  6.3k tok  20s
+    [seed 2009] turn  22  problem  5/60  actions=run_script  writes_left=1  48.8k tok  38s
+    [seed 2012] turn   2  problem  1/60  actions=run_script  writes_left=2  2.8k tok  8s
+    [seed 2009] turn  23  problem  6/60  actions=submit_answer  writes_left=1  51.6k tok  40s
+    [seed 2012] turn   4  problem  2/60  actions=submit_answer  writes_left=2  5.8k tok  10s
+    [seed 2011] turn   5  problem  2/60  actions=write_script  writes_left=1  8.4k tok  28s
+    [seed 2012] turn   5  problem  2/60  actions=write_script  writes_left=1  7.7k tok  15s
+    [seed 2012] turn   9  problem  2/60  actions=run_script  writes_left=1  16.1k tok  19s
+    [seed 2011] turn   7  problem  2/60  actions=run_script  writes_left=1  12.7k tok  34s
+    [seed 2012] turn  10  problem  2/60  actions=run_script  writes_left=1  18.3k tok  21s
+    [seed 2011] turn   8  problem  3/60  actions=submit_answer  writes_left=1  15.0k tok  36s
+    [seed 2012] turn  13  problem  3/60  actions=submit_answer  writes_left=1  25.2k tok  23s
+    [seed 2011] turn   9  problem  3/60  actions=run_script  writes_left=1  17.6k tok  39s
+    [seed 2011] turn  10  problem  3/60  actions=run_script  writes_left=1  20.3k tok  42s
+    [seed 2012] turn  22  problem  5/60  actions=write_script  writes_left=0  49.9k tok  31s
+  [seed 2012]    ran  $0.000  cumulative=$0.00
+    [seed 2005] turn  32  problem  7/60  actions=write_script  writes_left=0  84.6k tok  135s
+  [seed 2005]    ran  $0.000  cumulative=$0.00
+    [seed 2013] turn   1  problem  1/60  actions=write_script  writes_left=2  1.2k tok  3s
+    [seed 2013] turn   2  problem  1/60  actions=run_script  writes_left=2  2.6k tok  6s
+    [seed 2011] turn  16  problem  4/60  actions=run_script  writes_left=1  37.0k tok  51s
+    [seed 2013] turn   3  problem  2/60  actions=submit_answer  writes_left=2  4.1k tok  7s
+    [seed 2013] turn   4  problem  2/60  actions=write_script  writes_left=1  5.8k tok  10s
+    [seed 2011] turn  18  problem  4/60  actions=run_script  writes_left=1  43.0k tok  56s
+    [seed 2013] turn   5  problem  2/60  actions=run_script  writes_left=1  7.7k tok  12s
+    [seed 2013] turn   6  problem  3/60  actions=submit_answer  writes_left=1  9.6k tok  13s
+    [seed 2014] turn   2  problem  1/60  actions=write_script  writes_left=2  2.9k tok  15s
+    [seed 2011] turn  22  problem  4/60  actions=run_script  writes_left=1  55.8k tok  62s
+    [seed 2013] turn   9  problem  3/60  actions=write_script  writes_left=0  16.2k tok  19s
+  [seed 2013]    ran  $0.000  cumulative=$0.00
+    [seed 2014] turn   3  problem  1/60  actions=run_script  writes_left=2  4.5k tok  20s
+    [seed 2011] turn  24  problem  5/60  actions=submit_answer  writes_left=1  62.5k tok  66s
+    [seed 2014] turn   4  problem  1/60  actions=write_script  writes_left=1  6.1k tok  22s
+    [seed 2011] turn  27  problem  5/60  actions=run_script  writes_left=1  73.3k tok  70s
+    [seed 2015] turn   1  problem  1/60  actions=write_script  writes_left=2  1.4k tok  8s
+    [seed 2011] turn  28  problem  5/60  actions=list_scripts  writes_left=1  77.0k tok  71s
+    [seed 2014] turn   7  problem  1/60  actions=run_script  writes_left=1  11.2k tok  27s
+    [seed 2015] turn   2  problem  1/60  actions=run_script  writes_left=2  2.9k tok  13s
+    [seed 2015] turn   3  problem  2/60  actions=submit_answer  writes_left=2  4.4k tok  14s
+    [seed 2011] turn  33  problem  6/60  actions=run_script  writes_left=1  96.3k tok  79s
+    [seed 2011] turn  34  problem  6/60  actions=list_scripts  writes_left=1  100.3k tok  80s
+    [seed 2014] turn  12  problem  2/60  actions=write_script  writes_left=0  20.7k tok  34s
+  [seed 2014]    ran  $0.000  cumulative=$0.00
+    [seed 2015] turn   4  problem  2/60  actions=run_script  writes_left=2  6.2k tok  17s
+    [seed 2011] turn  37  problem  6/60  actions=read_script  writes_left=1  112.6k tok  83s
+    [seed 2009] turn  35  problem  9/60  actions=submit_answer  writes_left=1  92.3k tok  101s
+    [seed 2015] turn   5  problem  2/60  actions=run_script  writes_left=2  8.2k tok  26s
+    [seed 2011] turn  43  problem  7/60  actions=run_script  writes_left=1  138.8k tok  90s
+    [seed 2011] turn  44  problem  8/60  actions=submit_answer  writes_left=1  143.4k tok  93s
+    [seed 2016] turn   2  problem  1/60  actions=write_script  writes_left=2  2.9k tok  13s
+    [seed 2009] turn  40  problem 11/60  actions=submit_answer  writes_left=1  113.7k tok  112s
+    [seed 2016] turn   3  problem  2/60  actions=submit_answer  writes_left=2  4.4k tok  15s
+    [seed 2016] turn   4  problem  2/60  actions=write_script  writes_left=1  6.2k tok  20s
+    [seed 2016] turn   6  problem  2/60  actions=run_script  writes_left=1  9.9k tok  22s
+    [seed 2016] turn   7  problem  3/60  actions=submit_answer  writes_left=1  12.1k tok  24s
+    [seed 2016] turn  11  problem  3/60  actions=write_script  writes_left=0  22.1k tok  28s
+  [seed 2016]    ran  $0.000  cumulative=$0.00
+    [seed 2017] turn   1  problem  1/60  actions=write_script  writes_left=2  1.3k tok  4s
+    [seed 2011] turn  49  problem  9/60  actions=write_script  writes_left=0  167.8k tok  113s
+  [seed 2011]    ran  $0.000  cumulative=$0.00
+    [seed 2017] turn   2  problem  1/60  actions=write_script  writes_left=1  2.7k tok  9s
+    [seed 2015] turn   6  problem  2/60  actions=write_script  writes_left=1  11.1k tok  54s
+    [seed 2017] turn   3  problem  1/60  actions=run_script  writes_left=1  4.2k tok  11s
+    [seed 2017] turn   4  problem  2/60  actions=submit_answer  writes_left=1  5.8k tok  12s
+    [seed 2018] turn   1  problem  1/60  actions=write_script  writes_left=2  1.5k tok  8s
+    [seed 2017] turn   5  problem  2/60  actions=run_script  writes_left=1  7.7k tok  15s
+    [seed 2015] turn   7  problem  2/60  actions=run_script  writes_left=1  14.0k tok  60s
+    [seed 2018] turn   2  problem  1/60  actions=run_script  writes_left=2  3.0k tok  12s
+    [seed 2015] turn   8  problem  3/60  actions=submit_answer  writes_left=1  17.0k tok  62s
+    [seed 2017] turn   6  problem  2/60  actions=write_script  writes_left=0  9.8k tok  19s
+  [seed 2017]    ran  $0.000  cumulative=$0.00
+    [seed 2018] turn   3  problem  1/60  actions=write_script  writes_left=1  4.6k tok  16s
+    [seed 2019] turn   1  problem  1/60  actions=write_script  writes_left=2  1.4k tok  3s
+    [seed 2019] turn   2  problem  1/60  actions=run_script  writes_left=2  2.8k tok  4s
+    [seed 2018] turn   4  problem  1/60  actions=run_script  writes_left=1  6.5k tok  19s
+    [seed 2019] turn   3  problem  1/60  actions=run_script  writes_left=2  4.5k tok  9s
+    [seed 2019] turn   6  problem  2/60  actions=submit_answer  writes_left=2  9.7k tok  13s
+    [seed 2019] turn   7  problem  2/60  actions=write_script  writes_left=1  11.8k tok  20s
+    [seed 2019] turn   8  problem  2/60  actions=run_script  writes_left=1  13.9k tok  22s
+    [seed 2015] turn   9  problem  3/60  actions=run_script  writes_left=1  20.9k tok  86s
+    [seed 2018] turn   5  problem  1/60  actions=write_script  writes_left=0  8.8k tok  38s
+  [seed 2018]    ran  $0.000  cumulative=$0.00
+    [seed 2020] turn   1  problem  1/60  actions=write_script  writes_left=2  1.4k tok  6s
+    [seed 2020] turn   2  problem  1/60  actions=run_script  writes_left=2  2.9k tok  9s
+    [seed 2019] turn  14  problem  3/60  actions=write_script  writes_left=0  27.8k tok  36s
+  [seed 2019]    ran  $0.000  cumulative=$0.00
+    [seed 2015] turn  10  problem  3/60  actions=run_script  writes_left=1  25.1k tok  100s
+    [seed 2020] turn   3  problem  2/60  actions=submit_answer  writes_left=2  4.5k tok  12s
+  [seed 2009]    ran  $0.000  cumulative=$0.00
+    [seed 2021] turn   1  problem  1/60  actions=write_script  writes_left=2  1.3k tok  4s
+    [seed 2022] turn   1  problem  1/60  actions=write_script  writes_left=2  1.3k tok  3s
+    [seed 2021] turn   2  problem  1/60  actions=run_script  writes_left=2  2.8k tok  7s
+    [seed 2020] turn   4  problem  2/60  actions=write_script  writes_left=1  6.5k tok  19s
+    [seed 2022] turn   2  problem  1/60  actions=run_script  writes_left=2  2.6k tok  5s
+    [seed 2022] turn   3  problem  2/60  actions=submit_answer  writes_left=2  4.1k tok  6s
+    [seed 2020] turn   6  problem  2/60  actions=run_script  writes_left=1  10.5k tok  22s
+    [seed 2020] turn   7  problem  3/60  actions=submit_answer  writes_left=1  12.6k tok  23s
+    [seed 2022] turn   4  problem  2/60  actions=write_script  writes_left=1  5.9k tok  9s
+    [seed 2022] turn   5  problem  2/60  actions=run_script  writes_left=1  7.8k tok  12s
+    [seed 2020] turn   8  problem  3/60  actions=run_script  writes_left=1  15.1k tok  26s
+    [seed 2022] turn   6  problem  3/60  actions=submit_answer  writes_left=1  9.8k tok  13s
+    [seed 2021] turn   3  problem  1/60  actions=write_script  writes_left=1  4.7k tok  16s
+    [seed 2022] turn   8  problem  3/60  actions=write_script  writes_left=0  14.2k tok  16s
+  [seed 2022]    ran  $0.000  cumulative=$0.00
+    [seed 2021] turn   4  problem  1/60  actions=run_script  writes_left=1  6.5k tok  21s
+    [seed 2021] turn   5  problem  1/60  actions=run_script  writes_left=1  8.6k tok  25s
+    [seed 2020] turn  10  problem  3/60  actions=write_script  writes_left=0  20.5k tok  41s
+  [seed 2020]    ran  $0.000  cumulative=$0.00
+    [seed 2023] turn   2  problem  1/60  actions=write_script  writes_left=2  3.0k tok  15s
+    [seed 2021] turn   6  problem  1/60  actions=write_script  writes_left=0  10.9k tok  35s
+  [seed 2021]    ran  $0.000  cumulative=$0.00
+    [seed 2023] turn   3  problem  1/60  actions=run_script  writes_left=2  4.5k tok  17s
+    [seed 2023] turn   4  problem  2/60  actions=submit_answer  writes_left=2  6.1k tok  18s
+    [seed 2023] turn   5  problem  2/60  actions=run_script  writes_left=2  7.9k tok  21s
+    [seed 2023] turn   6  problem  3/60  actions=submit_answer  writes_left=2  9.8k tok  23s
+    [seed 2015] turn  14  problem  3/60  actions=write_script  writes_left=0  43.3k tok  143s
+  [seed 2015]    ran  $0.000  cumulative=$0.00
+    [seed 2023] turn  11  problem  4/60  actions=run_script  writes_left=2  21.2k tok  28s
+    [seed 2023] turn  12  problem  4/60  actions=write_script  writes_left=1  23.9k tok  31s
+    [seed 2023] turn  13  problem  4/60  actions=run_script  writes_left=1  26.6k tok  33s
+    [seed 2023] turn  14  problem  5/60  actions=submit_answer  writes_left=1  29.4k tok  33s
+    [seed 2023] turn  15  problem  5/60  actions=run_script  writes_left=1  32.4k tok  35s
+    [seed 2023] turn  17  problem  6/60  actions=submit_answer  writes_left=1  38.5k tok  36s
+    [seed 2023] turn  21  problem  6/60  actions=run_script  writes_left=1  52.0k tok  39s
+    [seed 2023] turn  31  problem  8/60  actions=run_script  writes_left=1  88.1k tok  46s
+    [seed 2023] turn  32  problem  8/60  actions=write_script  writes_left=0  92.1k tok  48s
+  [seed 2023]    ran  $0.000  cumulative=$0.00
+
+==== COMPLETED: A1 spend $0.00 ====
+
+==== A1 FIDELITY (n=24 seeds, 55 builds) ====
+  builds at FIRST SIGHT (lateness 0): 52/55 = 95%
+  mean lateness = 0.055  max = 1
+  built-set == first-B-distinct-arrivals: 19/24 = 79%
+  builds/seed = 2.29
+
+  => lateness ~0 CONFIRMS open-loop under disclosure; lateness>0 would mean it closes the loop when told.
+
+==== A1 TOOL vs exact pi* (a_script=1.0, n=24 seeds) ====
+  regret mean=2525 +/- 414  pos=21/24  model_traps/seed=0.88  pi*_traps/seed=0.67
+  (extrapolated analytically past any early-stop truncation -- value_of_builds prices the untouched tail of the T=60 stream from the model's actual build set, no re-run needed)

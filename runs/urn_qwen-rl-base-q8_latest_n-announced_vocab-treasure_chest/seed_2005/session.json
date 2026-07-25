@@ -1,0 +1,107 @@
+{
+  "seed": 2005,
+  "model_key": "qwen-rl-base-q8:latest",
+  "vocab": "treasure_chest",
+  "kept": {
+    "3": 1,
+    "7": 1,
+    "6": 1
+  },
+  "collected": 38,
+  "budget": 3,
+  "unparsed": 0,
+  "turn_usages": [
+    {
+      "input_tokens": 386,
+      "output_tokens": 4,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 450,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    },
+    {
+      "input_tokens": 490,
+      "output_tokens": 5,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "reasoning_tokens": 0
+    }
+  ],
+  "color_of_class": {
+    "3": "skull",
+    "7": "anchor",
+    "6": "dragon",
+    "1": "kraken",
+    "2": "phoenix",
+    "0": "serpent",
+    "4": "raven"
+  },
+  "transcript": [
+    {
+      "slot": 0,
+      "color": "skull",
+      "class_id": 3,
+      "class_position": 1,
+      "prompt": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "Decision: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 2,
+      "color": "anchor",
+      "class_id": 7,
+      "class_position": 1,
+      "prompt": "(Since your last choice: draw 2: another skull coin (already kept -> auto-collected, +1).) Draw 3 of 60: an anchor coin appears. You have 2 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "DECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    },
+    {
+      "slot": 3,
+      "color": "dragon",
+      "class_id": 6,
+      "class_position": 1,
+      "prompt": "Draw 4 of 60: a dragon coin appears. You have 1 keep(s) left. KEEP or PASS?",
+      "decision": "KEEP",
+      "how": "tag",
+      "reply": "DECISION: KEEP",
+      "response_model": "qwen-rl-base-q8:latest"
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "Decision: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "(Since your last choice: draw 2: another skull coin (already kept -> auto-collected, +1).) Draw 3 of 60: an anchor coin appears. You have 2 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "DECISION: KEEP"
+    },
+    {
+      "role": "user",
+      "content": "Draw 4 of 60: a dragon coin appears. You have 1 keep(s) left. KEEP or PASS?"
+    },
+    {
+      "role": "assistant",
+      "content": "DECISION: KEEP"
+    }
+  ],
+  "termination": "budget_exhausted"
+}

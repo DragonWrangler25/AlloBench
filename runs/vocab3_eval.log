@@ -1,0 +1,304 @@
+##### qwen2.5-coder:14b #####
+URN abstraction-gap control: qwen2.5-coder:14b, uniform N=8, g=1.0, 24 seeds x 3 vocab(s) ['treasure_chest', 'quiver', 'cauldron'] (clear labels, cap=$12.0) ...
+  [treasure_chest seed 2000] cached  $0.000  cumulative=$0.00
+  [treasure_chest seed 2004]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2008]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2003]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2001]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2006]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2002]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2007]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2005]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2009]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2010]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2011]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2012]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2013]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2014]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2015]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2016]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2019]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2017]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2018]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2020]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2022]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2000]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2001]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2003]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2021]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2002]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2023]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2004]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2005]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2007]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2006]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2010]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2008]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2009]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2011]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2012]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2013]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2015]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2014]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2017]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2016]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2018]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2019]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2021]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2020]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2023]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2022]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2000]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2002]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2001]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2004]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2003]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2005]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2006]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2007]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2008]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2009]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2010]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2011]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2012]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2013]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2014]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2015]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2016]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2017]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2018]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2019]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2020]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2021]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2022]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2023]    ran  $0.000  cumulative=$0.00
+
+==== COMPLETED: urn spend $0.00 ====
+
+==== [treasure_chest] URN FIDELITY (n=24 seeds, 72 keeps) ====
+  keeps at FIRST SIGHT (lateness 0): 51/72 = 71%
+  mean keep lateness = 0.361  max = 3
+  kept-set == first-B-distinct: 2/24 = 8%
+  keeps/seed = 3.00   unparsed decisions = 0
+  regret mean=1080 +/- 414  pos=14/24  model_traps/seed=1.17  pi*_traps/seed=0.67
+  balls/seed: model=32.9  pi*=39.0  clairvoyant(hindsight)=49.7  balls-regret=6.0 +/- 2.3 (84% of pi*'s)
+
+==== [quiver] URN FIDELITY (n=24 seeds, 72 keeps) ====
+  keeps at FIRST SIGHT (lateness 0): 72/72 = 100%
+  mean keep lateness = 0.000  max = 0
+  kept-set == first-B-distinct: 24/24 = 100%
+  keeps/seed = 3.00   unparsed decisions = 0
+  regret mean=1087 +/- 315  pos=14/24  model_traps/seed=1.21  pi*_traps/seed=0.67
+  balls/seed: model=32.9  pi*=39.0  clairvoyant(hindsight)=49.7  balls-regret=6.1 +/- 1.8 (84% of pi*'s)
+
+==== [cauldron] URN FIDELITY (n=24 seeds, 72 keeps) ====
+  keeps at FIRST SIGHT (lateness 0): 69/72 = 96%
+  mean keep lateness = 0.042  max = 1
+  kept-set == first-B-distinct: 23/24 = 96%
+  keeps/seed = 3.00   unparsed decisions = 0
+  regret mean=998 +/- 343  pos=14/24  model_traps/seed=1.17  pi*_traps/seed=0.67
+  balls/seed: model=33.4  pi*=39.0  clairvoyant(hindsight)=49.7  balls-regret=5.6 +/- 1.9 (86% of pi*'s)
+
+==== POOLED ACROSS 3 VOCABS (treasure_chest, quiver, cauldron) ====
+  first-sight %: mean=89%  range=[71%, 100%]
+  mean lateness: mean=0.134  range=[0.000, 0.361]
+  regret vs pi*: mean=1055  range=[998, 1087]
+  balls-regret vs pi*: mean=5.9  range=[5.6, 6.1]
+  (stdev across vocabs: first-sight=15.8%  lateness=0.198  regret=50 -- this is BETWEEN-VOCAB spread, not within-vocab noise)
+
+  (no paired tool baseline for qwen2.5-coder:14b: A1 announce was Haiku-only. Compare urn behavior across models on the same seeds instead.)
+
+==== [treasure_chest] TRANSCRIPT echo (seed 2000, kept={'0': 1, '4': 2, '6': 2}) ====
+  [slot  0] PROMPT: Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  1] PROMPT: Draw 2 of 60: an anchor coin appears. You have 3 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  2] PROMPT: Draw 3 of 60: a dragon coin appears. You have 2 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  3] PROMPT: Draw 4 of 60: a dragon coin appears. You have 2 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  4] PROMPT: Draw 5 of 60: a kraken coin appears. You have 1 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  5] PROMPT: Draw 6 of 60: a skull coin appears. You have 1 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+
+==== [quiver] TRANSCRIPT echo (seed 2000, kept={'6': 1, '0': 1, '4': 1}) ====
+  [slot  0] PROMPT: Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?
+            -> KEEP | DECISION: KEEP
+  [slot  1] PROMPT: Draw 2 of 60: a raven arrow appears. You have 2 keep(s) left. KEEP or PASS?
+            -> KEEP | DECISION: KEEP
+  [slot  2] PROMPT: Draw 3 of 60: an owl arrow appears. You have 1 keep(s) left. KEEP or PASS?
+            -> KEEP | DECISION: KEEP
+
+==== [cauldron] TRANSCRIPT echo (seed 2000, kept={'6': 1, '0': 1, '4': 1}) ====
+  [slot  0] PROMPT: Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?
+            -> KEEP | DECISION: KEEP
+  [slot  1] PROMPT: Draw 2 of 60: an ember potion appears. You have 2 keep(s) left. KEEP or PASS?
+            -> KEEP | DECISION: KEEP
+  [slot  2] PROMPT: Draw 3 of 60: a venom potion appears. You have 1 keep(s) left. KEEP or PASS?
+            -> KEEP | DECISION: KEEP
+##### qwen-rl-urn-final:latest #####
+URN abstraction-gap control: qwen-rl-urn-final:latest, uniform N=8, g=1.0, 24 seeds x 3 vocab(s) ['treasure_chest', 'quiver', 'cauldron'] (clear labels, cap=$12.0) ...
+  [treasure_chest seed 2000] cached  $0.000  cumulative=$0.00
+  [treasure_chest seed 2005]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2003]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2006]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2008]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2007]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2001]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2004]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2009]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2002]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2010]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2013]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2012]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2011]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2014]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2015]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2016]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2017]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2019]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2020]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2018]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2023]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2021]    ran  $0.000  cumulative=$0.00
+  [treasure_chest seed 2022]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2000]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2001]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2003]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2002]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2005]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2004]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2006]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2009]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2007]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2008]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2010]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2011]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2012]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2014]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2016]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2013]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2017]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2019]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2015]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2018]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2020]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2023]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2022]    ran  $0.000  cumulative=$0.00
+  [quiver seed 2021]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2001]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2000]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2003]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2002]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2006]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2005]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2004]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2007]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2009]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2008]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2010]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2013]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2012]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2011]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2014]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2016]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2015]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2017]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2018]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2020]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2019]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2021]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2023]    ran  $0.000  cumulative=$0.00
+  [cauldron seed 2022]    ran  $0.000  cumulative=$0.00
+
+==== COMPLETED: urn spend $0.00 ====
+
+==== [treasure_chest] URN FIDELITY (n=24 seeds, 72 keeps) ====
+  keeps at FIRST SIGHT (lateness 0): 10/72 = 14%
+  mean keep lateness = 1.028  max = 3
+  kept-set == first-B-distinct: 0/24 = 0%
+  keeps/seed = 3.00   unparsed decisions = 0
+  regret mean=-335 +/- 361  pos=14/24  model_traps/seed=0.46  pi*_traps/seed=0.67
+  balls/seed: model=40.8  pi*=39.0  clairvoyant(hindsight)=49.7  balls-regret=-1.9 +/- 2.0 (105% of pi*'s)
+
+==== [quiver] URN FIDELITY (n=24 seeds, 72 keeps) ====
+  keeps at FIRST SIGHT (lateness 0): 24/72 = 33%
+  mean keep lateness = 0.792  max = 3
+  kept-set == first-B-distinct: 1/24 = 4%
+  keeps/seed = 3.00   unparsed decisions = 0
+  regret mean=-566 +/- 347  pos=11/24  model_traps/seed=0.46  pi*_traps/seed=0.67
+  balls/seed: model=42.1  pi*=39.0  clairvoyant(hindsight)=49.7  balls-regret=-3.2 +/- 1.9 (108% of pi*'s)
+
+==== [cauldron] URN FIDELITY (n=24 seeds, 72 keeps) ====
+  keeps at FIRST SIGHT (lateness 0): 7/72 = 10%
+  mean keep lateness = 1.083  max = 3
+  kept-set == first-B-distinct: 1/24 = 4%
+  keeps/seed = 3.00   unparsed decisions = 0
+  regret mean=-395 +/- 342  pos=13/24  model_traps/seed=0.42  pi*_traps/seed=0.67
+  balls/seed: model=41.2  pi*=39.0  clairvoyant(hindsight)=49.7  balls-regret=-2.2 +/- 1.9 (106% of pi*'s)
+
+==== POOLED ACROSS 3 VOCABS (treasure_chest, quiver, cauldron) ====
+  first-sight %: mean=19%  range=[10%, 33%]
+  mean lateness: mean=0.968  range=[0.792, 1.083]
+  regret vs pi*: mean=-432  range=[-566, -335]
+  balls-regret vs pi*: mean=-2.4  range=[-3.2, -1.9]
+  (stdev across vocabs: first-sight=12.6%  lateness=0.155  regret=120 -- this is BETWEEN-VOCAB spread, not within-vocab noise)
+
+  (no paired tool baseline for qwen-rl-urn-final:latest: A1 announce was Haiku-only. Compare urn behavior across models on the same seeds instead.)
+
+==== [treasure_chest] TRANSCRIPT echo (seed 2000, kept={'4': 2, '6': 2, '3': 2}) ====
+  [slot  0] PROMPT: Draw 1 of 60: a skull coin appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  1] PROMPT: Draw 2 of 60: an anchor coin appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  2] PROMPT: Draw 3 of 60: a dragon coin appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  3] PROMPT: Draw 4 of 60: a dragon coin appears. You have 3 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  4] PROMPT: Draw 5 of 60: a kraken coin appears. You have 2 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  5] PROMPT: Draw 6 of 60: a skull coin appears. You have 2 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  9] PROMPT: (Since your last choice: draw 7: another skull coin (already kept -> auto-collected, +1); draw 8: another dragon coin (already kept -> auto-collected, +1); draw 9: another dragon coin (already kept -> auto-collected, +1).) Draw 10 of 60: a phoenix coin appears. You have 1 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot 12] PROMPT: (Since your last choice: draw 11: another skull coin (already kept -> auto-collected, +1); draw 12: another skull coin (already kept -> auto-collected, +1).) Draw 13 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot 14] PROMPT: (Since your last choice: draw 14: another skull coin (already kept -> auto-collected, +1).) Draw 15 of 60: a serpent coin appears. You have 1 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+
+==== [quiver] TRANSCRIPT echo (seed 2000, kept={'4': 2, '6': 2, '3': 1}) ====
+  [slot  0] PROMPT: Draw 1 of 60: a hawk arrow appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  1] PROMPT: Draw 2 of 60: a raven arrow appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  2] PROMPT: Draw 3 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  3] PROMPT: Draw 4 of 60: an owl arrow appears. You have 3 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  4] PROMPT: Draw 5 of 60: a falcon arrow appears. You have 2 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  5] PROMPT: Draw 6 of 60: a hawk arrow appears. You have 2 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  9] PROMPT: (Since your last choice: draw 7: another hawk arrow (already kept -> auto-collected, +1); draw 8: another owl arrow (already kept -> auto-collected, +1); draw 9: another owl arrow (already kept -> auto-collected, +1).) Draw 10 of 60: an eagle arrow appears. You have 1 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot 12] PROMPT: (Since your last choice: draw 11: another hawk arrow (already kept -> auto-collected, +1); draw 12: another hawk arrow (already kept -> auto-collected, +1).) Draw 13 of 60: a kestrel arrow appears. You have 1 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+
+==== [cauldron] TRANSCRIPT echo (seed 2000, kept={'4': 2, '6': 2, '3': 1}) ====
+  [slot  0] PROMPT: Draw 1 of 60: a frost potion appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  1] PROMPT: Draw 2 of 60: an ember potion appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  2] PROMPT: Draw 3 of 60: a venom potion appears. You have 3 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  3] PROMPT: Draw 4 of 60: a venom potion appears. You have 3 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  4] PROMPT: Draw 5 of 60: a mist potion appears. You have 2 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot  5] PROMPT: Draw 6 of 60: a frost potion appears. You have 2 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
+  [slot  9] PROMPT: (Since your last choice: draw 7: another frost potion (already kept -> auto-collected, +1); draw 8: another venom potion (already kept -> auto-collected, +1); draw 9: another venom potion (already kept -> auto-collected, +1).) Draw 10 of 60: a thorn potion appears. You have 1 keep(s) left. KEEP or PASS?
+            -> PASS | PASS
+  [slot 12] PROMPT: (Since your last choice: draw 11: another frost potion (already kept -> auto-collected, +1); draw 12: another frost potion (already kept -> auto-collected, +1).) Draw 13 of 60: a spark potion appears. You have 1 keep(s) left. KEEP or PASS?
+            -> KEEP | KEEP
