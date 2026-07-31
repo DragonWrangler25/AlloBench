@@ -1,4 +1,4 @@
-# AlloBench
+# AllocBench
 
 **Measuring Online Tool Allocation Capability in LLM Agents**
 
@@ -13,7 +13,7 @@
 
 Creating a reusable tool is an *investment*: an agent pays a fixed cost now in exchange for
 the possibility of future reuse. A capable agent should therefore build a small number of
-highly reusable tools rather than many one-offs. **AlloBench** is a paired benchmark that
+highly reusable tools rather than many one-offs. **AllocBench** is a paired benchmark that
 measures whether LLM agents actually make this allocation decision well under a fixed budget,
 in two matched contexts: an **abstract** text formulation and a **code-construction** task.
 
@@ -160,8 +160,8 @@ substitute your own conference class) before compiling.
 ## Citation
 
 ```bibtex
-@misc{allobench,
-  title         = {AlloBench: Measuring Online Tool Allocation Capability in LLM Agents},
+@misc{allocbench,
+  title         = {AllocBench: Measuring Online Tool Allocation Capability in LLM Agents},
   author        = {Wang, Daniel and Xu, Andrew},
   year          = {2026},
   eprint        = {2607.23332},
